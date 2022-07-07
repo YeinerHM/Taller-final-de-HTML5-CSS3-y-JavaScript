@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Talleres/CSS/index.css" />
+    <script src="/Talleres/JS/index.js"></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="accordion();">
+    <header>
+      <nav>
+        <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+        <a class="btn_menu" href="/Talleres/TMenu.html">Menu de Talleres</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      
+
+      <h1 id="t1">Talleres en PSeInt - Taller de ciclos</h1>
+      <article>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LxBrtrewutw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button class="accordion">Punto 1</button>
+        <div class="caja">
+          <h3>1-Realizar la siguiente figura por medio del ciclo Para</h3>
+          <img src="/Talleres/IMG/ejercicio1.jpg" alt="Ejercicio 1">
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_03_1
+            Definir i,j Como Entero;
+            
+            para i <- 1 Hasta 10 Con Paso 1 hacer
+              Para j <- 1 Hasta i Con Paso 1 Hacer
+                Escribir "*" Sin Saltar;
+              FinPara
+              Escribir "";
+            FinPara
+            
+          FinProceso
+           </code></pre>
+        </div>
+
+
+        <button class="accordion">Punto 2</button>
+        <div class="caja">
+          <h3>2-Realizar la siguiente figura por medio del ciclo Mientras - Hacer</h3>
+          <img src="/Talleres/IMG/ejercicio2.jpg" alt="Ejercicio 2">
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_03_2
+            Definir n ,j,i Como Entero;
+            n <- 10;
+            i <- 0;
+            Mientras i <> 10 Hacer
+              i <- i+1;
+              Para j <- 0 Hasta ( n - i -1 ) Con Paso 1 Hacer
+                Escribir " " Sin Saltar;
+              FinPara
+              Para j <- 1 Hasta i Con Paso 1 Hacer
+                Escribir "*" Sin Saltar;
+              FinPara
+              Escribir "";
+            FinMientras
+          FinProceso
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 3</button>
+        <div class="caja">
+          <h3>3-Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</h3>
+          <img src="/Talleres/IMG/ejercicio3.jpg" alt="Ejercicio 3">
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_03_3
+            definir a,b,c,n,i Como Entero;
+            n <- 12;
+            a <- 23;
+            
+            Repetir
+              n <- n-1;
+              a <- a-2;
+              
+              Para b <- 1 Hasta a Con Paso 1 Hacer
+                Escribir " " Sin Saltar;
+              FinPara
+              Para c <- a Hasta 21 Con Paso 1 Hacer
+                Escribir "* " Sin Saltar;
+              FinPara
+              Escribir "";
+            Hasta Que n = 1
+            
+            Escribir "                    ***";
+            Escribir "                    ***";
+            Escribir "                   *****";
+            Escribir "                  *******";
+            
+          FinProceso
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 4</button>
+        <div class="caja">
+          <h3>4-Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</h3>
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_03_4
+            Definir numero,multiplicar,resultado Como Entero;
+            Escribir "Por Favor indeque el numero de la tabla a generar ";
+            Leer multiplicar;
+            resultado <- 0;
+            Limpiar Pantalla;
+            Escribir "Se genero la tabla del: ",multiplicar;
+            
+            Para numero <- 1 Hasta 10 Con Paso 1 Hacer
+              resultado <- numero * multiplicar;
+              Escribir numero," X ",multiplicar," = ",resultado;
+              
+            FinPara
+          FinProceso
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 5</button>
+        <div class="caja">
+          <h3>5-Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</h3>
+          <img src="/Talleres/IMG/ejercicio5.jpg" alt="Ejercicio 5">
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_03_5
+            Definir opcion Como Entero;
+            Definir nombre Como Caracter;
+            
+            Repetir
+              Escribir "Menu de usuario";
+              Escribir "1. Capturar nombre";
+              Escribir "2. Saludar persona";
+              Escribir "3. Salir del sistema";
+              Leer opcion;
+              Limpiar Pantalla;
+              Segun opcion Hacer
+                1:
+                  Escribir "Ingrese su nombre";
+                  leer nombre;
+                  
+                2:
+                  Escribir "___________________Hola ",nombre," que tal__________________";
+                  
+                3:
+                  Escribir "______________________Cerrando Sistema______________________";
+                De Otro Modo:
+                  Escribir "__________________La opcion Elegida no existe_______________";
+              FinSegun
+            Hasta Que opcion = 3
+            
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 6</button>
+        <div class="caja">
+          <h3>6-Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_03_6
+            Definir opcion,contador,telefono,telefono_1,telefono_2,telefono_3,buscar Como Entero;
+            Definir nombre_1,nombre_2,nombre_3 Como Caracter;
+            Definir organizacion_1,organizacion_2,organizacion_3 Como Caracter;
+            telefono_1 <- 0;
+            telefono_2 <- 0;
+            telefono_3 <- 0;
+            contador <- 0;
+            
+            
+            Repetir
+              Escribir "--------Menu--------";
+              Escribir "1-Añadir contacto";
+              Escribir "2-Buscar contacto";
+              Escribir "3-Eleminar contacto";
+              Escribir "4-Cerrar sistema";
+              leer opcion;
+              Limpiar Pantalla;
+              
+              Segun opcion Hacer
+                1:
+                  si contador = 3 Entonces
+                    Escribir "No puede guardar contactos limite de 3 contactos";
+                    Escribir "Elimine contactos para tener disponible espacio";
+                  SiNo
+                    Escribir "----------------Ingresar contacto------------------";
+                    Escribir "Ingrese Telefono";
+                    Leer telefono;
+                    si telefono = telefono_1 o telefono = telefono_2 o telefono = telefono_3 Entonces
+                      Escribir "Este contacto ya esta guardado";
+                    SiNo
+                      si telefono_1 = 0 Entonces
+                        telefono_1 <- telefono;
+                        Escribir "Ingrese el nombre del contacto";
+                        Leer nombre_1;
+                        Escribir "Ingrese Organizacion";
+                        Leer organizacion_1;
+                        Limpiar Pantalla;
+                        Escribir "Contacto guardado";
+                        contador <- contador+1;
+                        
+                      SiNo
+                        si telefono_2 = 0 Entonces
+                          telefono_2 <- telefono;
+                          Escribir "Ingrese el nombre del contacto";
+                          Leer nombre_2;
+                          Escribir "Ingrese Organizacion";
+                          Leer organizacion_2;
+                          Limpiar Pantalla;
+                          Escribir "Contacto guardado";
+                          contador <- contador+1;
+                        SiNo
+                          si telefono_3 = 0 Entonces
+                            telefono_3 <- telefono;
+                            Escribir "Ingrese el nombre del contacto";
+                            Leer nombre_3;
+                            Escribir "Ingrese Organizacion";
+                            Leer organizacion_3;
+                            Limpiar Pantalla;
+                            Escribir "Contacto guardado";
+                            contador <- contador+1;
+                          FinSi
+                        FinSi
+                      FinSi
+                    FinSi
+                  FinSi
+                2:
+                  Escribir "-----------------------Buscar contacto----------------------";
+                  Escribir "Ingrese Numero a buscar";
+                  Leer buscar;
+                  si buscar <> telefono_1 y buscar <> telefono_2 y buscar <> telefono_3 Entonces
+                    Escribir "Este telefono no existe";
+                  SiNo
+                    si buscar = telefono_1 Entonces
+                      Escribir "Nombre: ",nombre_1;
+                      Escribir "Organizacion: ",organizacion_1;
+                      Escribir "Telefono: ",telefono_1;
+                    SiNo
+                      si  buscar = telefono_2 Entonces
+                        Escribir "Nombre: ",nombre_2;
+                        Escribir "Organizacion: ",organizacion_2;
+                        Escribir "Telefono: ",telefono_2;
+                      SiNo
+                        si  buscar = telefono_3 Entonces
+                          Escribir "Nombre: ",nombre_3;
+                          Escribir "Organizacion: ",organizacion_3;
+                          Escribir "Telefono: ",telefono_3;
+                        FinSi
+                      FinSi
+                    FinSi
+                  FinSi
+                  
+                3:
+                  Escribir "---------------------Eliminar contacto------------------------";
+                  Escribir "Escoja el contacto a eliminar";
+                  Escribir "1-",nombre_1," Organizacion: ",organizacion_1," Telefono: ",telefono_1;
+                  Escribir "2-",nombre_2," Organizacion: ",organizacion_2," Telefono: ",telefono_2;
+                  Escribir "3-",nombre_3," Organizacion: ",organizacion_3," Telefono: ",telefono_3;
+                  Escribir "Cualquier otra opcion para cancelar";
+                  Leer opcion;
+                  Segun opcion Hacer
+                    1:
+                      Escribir "Se elimino el contacto";
+                      Escribir "1-",nombre_1;
+                      nombre_1 <- "None";
+                      organizacion_1 <- "None";
+                      telefono_1 <- 0;
+                      contador <- contador-1;
+                    2:
+                      Escribir "Se elimino el contacto";
+                      Escribir "2-",nombre_2;
+                      nombre_2 <- "None";
+                      organizacion_2 <- "None";
+                      telefono_2 <- 0;
+                      contador <- contador-1;
+                    3:
+                      Escribir "Se elimino el contacto";
+                      Escribir "3-",nombre_3;
+                      nombre_3 <- "None";
+                      organizacion_3 <- "None";
+                      telefono_3 <- 0;
+                      contador <- contador-1;
+                      
+                  FinSegun
+                  
+                4:
+                  Escribir "______________________Cerrando Sistema______________________";
+                De Otro Modo:
+                  Escribir "__________________La opcion Elegida no existe_______________";
+              FinSegun
+            Hasta Que opcion = 4
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 7</button>
+        <div class="caja">
+          <h3>7-El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_03_7
+            Definir placa,placa_1,placa_2,placa_3,placa_4,placa_5 Como Caracter;
+            Definir marca_1,marca_2,marca_3,marca_4,marca_5 Como Caracter;
+            Definir nombre_1,nombre_2,nombre_3,nombre_4,nombre_5 Como Caracter;
+            Definir telefono_1,telefono_2,telefono_3,telefono_4,telefono_5 Como Entero;
+            Definir opcion,contador Como Entero;
+            placa_1<-"None";
+            placa_2<-"None";
+            placa_3<-"None";
+            placa_4<-"None";
+            placa_5<-"None";
+            contador <- 0;
+            
+            Repetir
+              Escribir "----------El guardian----------";
+              Escribir "1-Ingresar vehiculo";
+              Escribir "2-Buscar vehiculo";
+              Escribir "3-Salida de vehiculo";
+              Escribir "4-Cerrar sistema";
+              Leer opcion;
+              Limpiar Pantalla;
+              
+              Segun opcion Hacer
+                1:
+                  Escribir "----------Ingreso de vehiculos-----------";
+                  si contador=5 Entonces
+                    Escribir "Parqueadero lleno maximo de 5 vehiculos";
+                    Escribir "Retire vehiculos del parqueadero para tener disponibilidad";
+                  SiNo
+                    Escribir "Ingrese Placa";
+                    Leer placa;
+                    si placa <> placa_1 y placa <> placa_2 y placa <> placa_3 y placa <> placa_4 y placa <> placa_5 Entonces
+                      Escribir "Este vehiculo ya esta guardado";
+                    SiNo
+                      si placa_1 = "None" Entonces
+                        placa_1 <- placa;
+                        Escribir "Ingese marca";
+                        Leer marca_1;
+                        Escribir "Ingrese nombre completo del propietario";
+                        Leer nombre_1;
+                        Escribir "Ingrese telefono";
+                        Leer telefono_1;
+                        contador<- contador+1;
+                        Limpiar Pantalla;
+                        Escribir "------------------Vehiculo guardado----------------";
+                      SiNo
+                        si placa_2 = "None" Entonces
+                          placa_2 <- placa;
+                          Escribir "Ingese marca";
+                          Leer marca_2;
+                          Escribir "Ingrese nombre completo del propietario";
+                          Leer nombre_2;
+                          Escribir "Ingrese telefono";
+                          Leer telefono_2;
+                          contador<- contador+1;
+                          Limpiar Pantalla;
+                          Escribir "------------------Vehiculo guardado----------------";
+                        SiNo
+                          si placa_3 = "None" Entonces
+                            placa_3 <- placa;
+                            Escribir "Ingese marca";
+                            Leer marca_3;
+                            Escribir "Ingrese nombre completo del propietario";
+                            Leer nombre_3;
+                            Escribir "Ingrese telefono";
+                            Leer telefono_3;
+                            contador<- contador+1;
+                            Limpiar Pantalla;
+                            Escribir "------------------Vehiculo guardado----------------";
+                          SiNo
+                            si placa_4 = "None" Entonces
+                              placa_4 <- placa;
+                              Escribir "Ingese marca";
+                              Leer marca_4;
+                              Escribir "Ingrese nombre completo del propietario";
+                              Leer nombre_4;
+                              Escribir "Ingrese telefono";
+                              Leer telefono_4;
+                              contador<- contador+1;
+                              Limpiar Pantalla;
+                              Escribir "------------------Vehiculo guardado----------------";
+                            SiNo
+                              si placa_5 = "None" Entonces
+                                placa_5 <- placa;
+                                Escribir "Ingese marca";
+                                Leer marca_5;
+                                Escribir "Ingrese nombre completo del propietario";
+                                Leer nombre_5;
+                                Escribir "Ingrese telefono";
+                                Leer telefono_5;
+                                contador<- contador+1;
+                                Limpiar Pantalla;
+                                Escribir "------------------Vehiculo guardado----------------";
+                              FinSi
+                            FinSi
+                          FinSi
+                        FinSi
+                      FinSi
+                    FinSi
+                    
+                  FinSi
+                  
+                2:
+                  Escribir "-----------Buscar vehiculo----------------";
+                  Escribir "Ingrese la placa del vehiculo";
+                  Leer placa;
+                  si placa <> placa_1 y placa <> placa_2 y placa <> placa_3 y placa <> placa_4 y placa <> placa_5 Entonces
+                    Escribir "Este Vehiculo no se encuentra guardado en el parqueadero";
+                  SiNo
+                    si placa = placa_1 Entonces
+                      Escribir "Nombre: ",nombre_1;
+                      Escribir "Telefono: ",telefono_1;
+                      Escribir "Placa: ",placa_1;
+                      Escribir "Marca: ",marca_1;
+                    SiNo
+                      si placa = placa_2 Entonces
+                        Escribir "Nombre: ",nombre_2;
+                        Escribir "Telefono: ",telefono_2;
+                        Escribir "Placa: ",placa_2;
+                        Escribir "Marca: ",marca_2;
+                      SiNo
+                        si placa = placa_3 Entonces
+                          Escribir "Nombre: ",nombre_3;
+                          Escribir "Telefono: ",telefono_3;
+                          Escribir "Placa: ",placa_3;
+                          Escribir "Marca: ",marca_3;
+                        SiNo
+                          si placa = placa_4 Entonces
+                            Escribir "Nombre: ",nombre_4;
+                            Escribir "Telefono: ",telefono_4;
+                            Escribir "Placa: ",placa_4;
+                            Escribir "Marca: ",marca_4;
+                          SiNo
+                            si placa = placa_5 Entonces
+                              Escribir "Nombre: ",nombre_5;
+                              Escribir "Telefono: ",telefono_5;
+                              Escribir "Placa: ",placa_5;
+                              Escribir "Marca: ",marca_5;
+                            FinSi
+                          FinSi
+                        FinSi
+                      FinSi
+                    FinSi
+                  FinSi
+                3:
+                  Escribir "-------------Salida de vehiculos-------------";
+                  Escribir "Vehiculos guardados: ",contador;
+                  Escribir "1-Placa: ",placa_1," Marca: ",marca_1," Propietario: ",nombre_1," Telefono: ",telefono_1;
+                  Escribir "2-Placa: ",placa_2," Marca: ",marca_2," Propietario: ",nombre_2," Telefono: ",telefono_2;
+                  Escribir "3-Placa: ",placa_3," Marca: ",marca_3," Propietario: ",nombre_3," Telefono: ",telefono_3;
+                  Escribir "4-Placa: ",placa_4," Marca: ",marca_4," Propietario: ",nombre_4," Telefono: ",telefono_4;
+                  Escribir "5-Placa: ",placa_5," Marca: ",marca_5," Propietario: ",nombre_5," Telefono: ",telefono_5;
+                  Escribir "Cualquier otra opcion para cancelar";
+                  Leer opcion;
+                  Limpiar Pantalla;
+                  Segun opcion Hacer
+                    1:
+                      Escribir "Vihiculo Retirado el parqueadero";
+                      Escribir "Placa: ",placa_1;
+                      Escribir "Marca: ",marca_1;
+                      Escribir "Propietario: ",nombre_1;
+                      Escribir "Telefono: ",telefono_1;
+                      placa_1 <- "None";
+                      marca_1 <- "None";
+                      nombre_1 <- "None";
+                      telefono_1 <- 0;
+                      contador <- contador-1;
+                    2:
+                      Escribir "Vihiculo Retirado el parqueadero";
+                      Escribir "Placa: ",placa_2;
+                      Escribir "Marca: ",marca_2;
+                      Escribir "Propietario: ",nombre_2;
+                      Escribir "Telefono: ",telefono_2;
+                      placa_2 <- "None";
+                      marca_2 <- "None";
+                      nombre_2 <- "None";
+                      telefono_2 <- 0;
+                      contador <- contador-1;
+                    3:
+                      Escribir "Vihiculo Retirado el parqueadero";
+                      Escribir "Placa: ",placa_3;
+                      Escribir "Marca: ",marca_3;
+                      Escribir "Propietario: ",nombre_3;
+                      Escribir "Telefono: ",telefono_3;
+                      placa_3 <- "None";
+                      marca_3 <- "None";
+                      nombre_3 <- "None";
+                      telefono_3 <- 0;
+                      contador <- contador-1;
+                    4:
+                      Escribir "Vihiculo Retirado el parqueadero";
+                      Escribir "Placa: ",placa_4;
+                      Escribir "Marca: ",marca_4;
+                      Escribir "Propietario: ",nombre_4;
+                      Escribir "Telefono: ",telefono_4;
+                      placa_4 <- "None";
+                      marca_4 <- "None";
+                      nombre_4 <- "None";
+                      telefono_4 <- 0;
+                      contador <- contador-1;
+                    5:
+                      Escribir "Vihiculo Retirado el parqueadero";
+                      Escribir "Placa: ",placa_5,;
+                      Escribir "Marca: ",marca_5;
+                      Escribir "Propietario: ",nombre_5;
+                      Escribir "Telefono: ",telefono_5;
+                      placa_5 <- "None";
+                      marca_5 <- "None";
+                      nombre_5 <- "None";
+                      telefono_5 <- 0;
+                      contador <- contador-1;
+                  FinSegun
+                  
+                  
+                4:
+                  Escribir "______________________Cerrando Sistema______________________";
+                De Otro Modo:
+                  Escribir "__________________La opcion Elegida no existe_______________";
+              FinSegun
+              
+              
+            Hasta Que opcion = 4
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 8</button>
+        <div class="caja">
+          <h3>8-La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_03_8
+            Definir opcion,contador Como Entero;
+            Definir cedula,cedula_1,cedula_2,cedula_3,cedula_4,cedula_5,cedula_6,cedula_7,cedula_8 Como Entero;
+            Definir nombre_1,nombre_2,nombre_3,nombre_4,nombre_5,nombre_6,nombre_7,nombre_8 Como Caracter;
+            Definir telefono_1,telefono_2,telefono_3,telefono_4,telefono_5,telefono_6,telefono_7,telefono_8 Como Caracter;
+            Definir nota_1,nota_2,nota_3,nota_4,nota_5,nota_6,nota_7,nota_8 Como Caracter;
+            contador <- 0;
+            cedula_1 <- 0;
+            cedula_2 <- 0;
+            cedula_3 <- 0;
+            cedula_4 <- 0;
+            cedula_5 <- 0;
+            cedula_6 <- 0;
+            cedula_7 <- 0;
+            cedula_8 <- 0;
+            nombre_1 <- "None";
+            nombre_2 <- "None";
+            nombre_3 <- "None";
+            nombre_4 <- "None";
+            nombre_5 <- "None";
+            nombre_6 <- "None";
+            nombre_7 <- "None";
+            nombre_8 <- "None";
+            telefono_1 <- "None";
+            telefono_2 <- "None";
+            telefono_3 <- "None";
+            telefono_4 <- "None";
+            telefono_5 <- "None";
+            telefono_6 <- "None";
+            telefono_7 <- "None";
+            telefono_8 <- "None";
+            nota_1 <- "None";
+            nota_2 <- "None";
+            nota_3 <- "None";
+            nota_4 <- "None";
+            nota_5 <- "None";
+            nota_6 <- "None";
+            nota_7 <- "None";
+            nota_8 <- "None";
+            
+            Repetir
+              Escribir "-------------El Maestro------------";
+              Escribir "1-Ingresar Alumnos";
+              Escribir "2-Consultar Notas y Alumnos";
+              Escribir "3-Cerrar sistema";
+              Leer opcion;
+              Limpiar Pantalla;
+              Segun opcion Hacer
+                1:
+                  Escribir "---------------Ingresar Alumno----------";
+                  Escribir "Ingrese numero de Cedula";
+                  Leer cedula;
+                  si cedula=cedula_1 o cedula=cedula_2 o cedula=cedula_3 o cedula=cedula_4 o cedula=cedula_5 o cedula=cedula_6 o cedula=cedula_7 o cedula=cedula_8 Entonces
+                    Escribir "Alumno ya esta inscrito";
+                  SiNo
+                    si contador = 8 Entonces
+                      Escribir "Limite de Alumos en la escuela 8";
+                    SiNo
+                      si cedula_1 = 0 Entonces
+                        cedula_1 <- cedula;
+                        Escribir "Nombre de Alumno";
+                        leer nombre_1;
+                        Escribir "Ingrese telefono";
+                        Leer telefono_1;
+                        nota_1 <- "Pendiente de pruba";
+                        contador <- contador+1;
+                        Limpiar Pantalla;
+                      SiNo
+                        si cedula_2 = 0 Entonces
+                          cedula_2 <- cedula;
+                          Escribir "Nombre de Alumno";
+                          leer nombre_2;
+                          Escribir "Ingrese telefono";
+                          Leer telefono_2;
+                          nota_2 <- "Pendiente de pruba";
+                          contador <- contador+1;
+                          Limpiar Pantalla;
+                        SiNo
+                          si cedula_3 = 0 Entonces
+                            cedula_3 <- cedula;
+                            Escribir "Nombre de Alumno";
+                            leer nombre_3;
+                            Escribir "Ingrese telefono";
+                            Leer telefono_3;
+                            nota_3 <- "Pendiente de pruba";
+                            contador <- contador+1;
+                            Limpiar Pantalla;
+                          SiNo
+                            si cedula_4 = 0 Entonces
+                              cedula_4 <- cedula;
+                              Escribir "Nombre de Alumno";
+                              leer nombre_4;
+                              Escribir "Ingrese telefono";
+                              Leer telefono_4;
+                              nota_4 <- "Pendiente de pruba";
+                              contador <- contador+1;
+                              Limpiar Pantalla;
+                            SiNo
+                              si cedula_5 = 0 Entonces
+                                cedula_5 <- cedula;
+                                Escribir "Nombre de Alumno";
+                                leer nombre_5;
+                                Escribir "Ingrese telefono";
+                                Leer telefono_5;
+                                nota_5 <- "Pendiente de pruba";
+                                contador <- contador+1;
+                                Limpiar Pantalla;
+                              SiNo
+                                si cedula_6 = 0 Entonces
+                                  cedula_6 <- cedula;
+                                  Escribir "Nombre de Alumno";
+                                  leer nombre_6;
+                                  Escribir "Ingrese telefono";
+                                  Leer telefono_6;
+                                  nota_6 <- "Pendiente de pruba";
+                                  contador <- contador+1;
+                                  Limpiar Pantalla;
+                                SiNo
+                                  si cedula_7 = 0 Entonces
+                                    cedula_7 <- cedula;
+                                    Escribir "Nombre de Alumno";
+                                    leer nombre_7;
+                                    Escribir "Ingrese telefono";
+                                    Leer telefono_7;
+                                    nota_7 <- "Pendiente de pruba";
+                                    contador <- contador+1;
+                                    Limpiar Pantalla;
+                                  SiNo
+                                    si cedula_8 = 0 Entonces
+                                      cedula_8 <- cedula;
+                                      Escribir "Nombre de Alumno";
+                                      leer nombre_8;
+                                      Escribir "Ingrese telefono";
+                                      Leer telefono_8;
+                                      nota_8 <- "Pendiente de pruba";
+                                      contador <- contador+1;
+                                      Limpiar Pantalla;
+                                    FinSi
+                                  FinSi
+                                FinSi
+                              FinSi
+                            FinSi
+                          FinSi
+                        FinSi
+                      FinSi
+                    FinSi
+                  FinSi
+                  
+                  
+                2:
+                  Escribir "Curso de conducion";
+                  Escribir "1-Editar Notas del Curso";
+                  Escribir "2-Consultar Alumnos y Notas";
+                  leer opcion;
+                  Limpiar Pantalla;
+                  Segun opcion Hacer
+                    1:
+                      SI contador = 0 Entonces
+                        Escribir "No hay alumnos para editar Notas";
+                      SiNo
+                        Escribir "----------Editar Nota-----------";
+                        Escribir "-------------------------------------------------Alumnos-------------------------------------------------";
+                        Escribir "1-Cedula: ",cedula_1," Nombre: ",nombre_1," Telefono: ",telefono_1," Nota: ",nota_1;
+                        Escribir "2-Cedula: ",cedula_2," Nombre: ",nombre_2," Telefono: ",telefono_2," Nota: ",nota_2;
+                        Escribir "3-Cedula: ",cedula_3," Nombre: ",nombre_3," Telefono: ",telefono_3," Nota: ",nota_3;
+                        Escribir "4-Cedula: ",cedula_4," Nombre: ",nombre_4," Telefono: ",telefono_4," Nota: ",nota_4;
+                        Escribir "5-Cedula: ",cedula_5," Nombre: ",nombre_5," Telefono: ",telefono_5," Nota: ",nota_5;
+                        Escribir "6-Cedula: ",cedula_6," Nombre: ",nombre_6," Telefono: ",telefono_6," Nota: ",nota_6;
+                        Escribir "7-Cedula: ",cedula_7," Nombre: ",nombre_7," Telefono: ",telefono_7," Nota: ",nota_7;
+                        Escribir "8-Cedula: ",cedula_8," Nombre: ",nombre_8," Telefono: ",telefono_8," Nota: ",nota_8;
+                        Leer opcion;
+                        Segun opcion Hacer
+                          1:
+                            Escribir "1-APROBADO";
+                            Escribir "2-REPROBADO";
+                            Leer opcion;
+                            Limpiar Pantalla;
+                            Segun opcion Hacer
+                              1:
+                                nota_1<- "APROBADO para continuar con el trámite de adquirir la licencia de conducción.";
+                              2:
+                                nota_1<- "REPROBADO para continuar con el trámite de adquirir la licencia de conducción REPETIR CURSO.";
+                            FinSegun
+                          2:
+                            Escribir "1-APROBADO";
+                            Escribir "2-REPROBADO";
+                            Leer opcion;
+                            Limpiar Pantalla;
+                            Segun opcion Hacer
+                              1:
+                                nota_2<- "APROBADO para continuar con el trámite de adquirir la licencia de conducción.";
+                              2:
+                                nota_2<- "REPROBADO para continuar con el trámite de adquirir la licencia de conducción REPETIR CURSO.";
+                            FinSegun
+                          3:
+                            Escribir "1-APROBADO";
+                            Escribir "2-REPROBADO";
+                            Leer opcion;
+                            Limpiar Pantalla;
+                            Segun opcion Hacer
+                              1:
+                                nota_3<- "APROBADO para continuar con el trámite de adquirir la licencia de conducción.";
+                              2:
+                                nota_3<- "REPROBADO para continuar con el trámite de adquirir la licencia de conducción REPETIR CURSO.";
+                            FinSegun
+                          4:
+                            Escribir "1-APROBADO";
+                            Escribir "2-REPROBADO";
+                            Leer opcion;
+                            Limpiar Pantalla;
+                            Segun opcion Hacer
+                              1:
+                                nota_4<- "APROBADO para continuar con el trámite de adquirir la licencia de conducción.";
+                              2:
+                                nota_4<- "REPROBADO para continuar con el trámite de adquirir la licencia de conducción REPETIR CURSO.";
+                            FinSegun
+                          5:
+                            Escribir "1-APROBADO";
+                            Escribir "2-REPROBADO";
+                            Leer opcion;
+                            Limpiar Pantalla;
+                            Segun opcion Hacer
+                              1:
+                              1:
+                                nota_5<- "APROBADO para continuar con el trámite de adquirir la licencia de conducción.";
+                              2:
+                                nota_5<- "REPROBADO para continuar con el trámite de adquirir la licencia de conducción REPETIR CURSO.";
+                            FinSegun
+                          6:
+                            Escribir "1-APROBADO";
+                            Escribir "2-REPROBADO";
+                            Leer opcion;
+                            Limpiar Pantalla;
+                            Segun opcion Hacer
+                              1:
+                                nota_6<- "APROBADO para continuar con el trámite de adquirir la licencia de conducción.";
+                              2:
+                                nota_6<- "REPROBADO para continuar con el trámite de adquirir la licencia de conducción REPETIR CURSO.";
+                            FinSegun
+                          7:
+                            Escribir "1-APROBADO";
+                            Escribir "2-REPROBADO";
+                            Leer opcion;
+                            Limpiar Pantalla;
+                            Segun opcion Hacer
+                              1:
+                                nota_7<- "APROBADO para continuar con el trámite de adquirir la licencia de conducción.";
+                              2:
+                                nota_7<- "REPROBADO para continuar con el trámite de adquirir la licencia de conducción REPETIR CURSO.";
+                            FinSegun
+                          8: 
+                            Escribir "1-APROBADO";
+                            Escribir "2-REPROBADO";
+                            Leer opcion;
+                            Limpiar Pantalla;
+                            Segun opcion Hacer
+                              1:
+                                nota_8<- "APROBADO para continuar con el trámite de adquirir la licencia de conducción.";
+                              2:
+                                nota_8<- "REPROBADO para continuar con el trámite de adquirir la licencia de conducción REPETIR CURSO.";
+                          FinSegun
+                      FinSegun
+                      FinSi
+                      
+                      
+                    2:
+                      si contador = 0 Entonces
+                        Escribir "No hay Alumnos inscritos";
+                      SiNo
+                        si contador = 1 Entonces
+                          Escribir "-------------------------------------------------Alumnos-------------------------------------------------";
+                          Escribir "1-Cedula: ",cedula_1," Nombre: ",nombre_1," Telefono: ",telefono_1," Nota: ",nota_1;
+                        sino 
+                          si contador = 2 Entonces
+                            Escribir "-------------------------------------------------Alumnos-------------------------------------------------";
+                            Escribir "1-Cedula: ",cedula_1," Nombre: ",nombre_1," Telefono: ",telefono_1," Nota: ",nota_1;
+                            Escribir "2-Cedula: ",cedula_2," Nombre: ",nombre_2," Telefono: ",telefono_2," Nota: ",nota_2;
+                          SiNo
+                            si contador = 3 Entonces
+                              Escribir "-------------------------------------------------Alumnos-------------------------------------------------";
+                              Escribir "1-Cedula: ",cedula_1," Nombre: ",nombre_1," Telefono: ",telefono_1," Nota: ",nota_1;
+                              Escribir "2-Cedula: ",cedula_2," Nombre: ",nombre_2," Telefono: ",telefono_2," Nota: ",nota_2;
+                              Escribir "3-Cedula: ",cedula_3," Nombre: ",nombre_3," Telefono: ",telefono_3," Nota: ",nota_3;
+                            sino 
+                              si contador = 4 Entonces
+                                Escribir "-------------------------------------------------Alumnos-------------------------------------------------";
+                                Escribir "1-Cedula: ",cedula_1," Nombre: ",nombre_1," Telefono: ",telefono_1," Nota: ",nota_1;
+                                Escribir "2-Cedula: ",cedula_2," Nombre: ",nombre_2," Telefono: ",telefono_2," Nota: ",nota_2;
+                                Escribir "3-Cedula: ",cedula_3," Nombre: ",nombre_3," Telefono: ",telefono_3," Nota: ",nota_3;
+                                Escribir "4-Cedula: ",cedula_4," Nombre: ",nombre_4," Telefono: ",telefono_4," Nota: ",nota_4;
+                              SiNo
+                                si contador = 5 Entonces
+                                  Escribir "-------------------------------------------------Alumnos-------------------------------------------------";
+                                  Escribir "1-Cedula: ",cedula_1," Nombre: ",nombre_1," Telefono: ",telefono_1," Nota: ",nota_1;
+                                  Escribir "2-Cedula: ",cedula_2," Nombre: ",nombre_2," Telefono: ",telefono_2," Nota: ",nota_2;
+                                  Escribir "3-Cedula: ",cedula_3," Nombre: ",nombre_3," Telefono: ",telefono_3," Nota: ",nota_3;
+                                  Escribir "4-Cedula: ",cedula_4," Nombre: ",nombre_4," Telefono: ",telefono_4," Nota: ",nota_4;
+                                  Escribir "5-Cedula: ",cedula_5," Nombre: ",nombre_5," Telefono: ",telefono_5," Nota: ",nota_5;
+                                sino 
+                                  si contador = 6 Entonces
+                                    Escribir "-------------------------------------------------Alumnos-------------------------------------------------";
+                                    Escribir "1-Cedula: ",cedula_1," Nombre: ",nombre_1," Telefono: ",telefono_1," Nota: ",nota_1;
+                                    Escribir "2-Cedula: ",cedula_2," Nombre: ",nombre_2," Telefono: ",telefono_2," Nota: ",nota_2;
+                                    Escribir "3-Cedula: ",cedula_3," Nombre: ",nombre_3," Telefono: ",telefono_3," Nota: ",nota_3;
+                                    Escribir "4-Cedula: ",cedula_4," Nombre: ",nombre_4," Telefono: ",telefono_4," Nota: ",nota_4;
+                                    Escribir "5-Cedula: ",cedula_5," Nombre: ",nombre_5," Telefono: ",telefono_5," Nota: ",nota_5;
+                                    Escribir "6-Cedula: ",cedula_6," Nombre: ",nombre_6," Telefono: ",telefono_6," Nota: ",nota_6;
+                                  sino 
+                                    si contador = 7 Entonces
+                                      Escribir "-------------------------------------------------Alumnos-------------------------------------------------";
+                                      Escribir "1-Cedula: ",cedula_1," Nombre: ",nombre_1," Telefono: ",telefono_1," Nota: ",nota_1;
+                                      Escribir "2-Cedula: ",cedula_2," Nombre: ",nombre_2," Telefono: ",telefono_2," Nota: ",nota_2;
+                                      Escribir "3-Cedula: ",cedula_3," Nombre: ",nombre_3," Telefono: ",telefono_3," Nota: ",nota_3;
+                                      Escribir "4-Cedula: ",cedula_4," Nombre: ",nombre_4," Telefono: ",telefono_4," Nota: ",nota_4;
+                                      Escribir "5-Cedula: ",cedula_5," Nombre: ",nombre_5," Telefono: ",telefono_5," Nota: ",nota_5;
+                                      Escribir "6-Cedula: ",cedula_6," Nombre: ",nombre_6," Telefono: ",telefono_6," Nota: ",nota_6;
+                                      Escribir "7-Cedula: ",cedula_7," Nombre: ",nombre_7," Telefono: ",telefono_7," Nota: ",nota_7;
+                                    SiNo
+                                      si contador = 8 Entonces
+                                        Escribir "-------------------------------------------------Alumnos-------------------------------------------------";
+                                        Escribir "1-Cedula: ",cedula_1," Nombre: ",nombre_1," Telefono: ",telefono_1," Nota: ",nota_1;
+                                        Escribir "2-Cedula: ",cedula_2," Nombre: ",nombre_2," Telefono: ",telefono_2," Nota: ",nota_2;
+                                        Escribir "3-Cedula: ",cedula_3," Nombre: ",nombre_3," Telefono: ",telefono_3," Nota: ",nota_3;
+                                        Escribir "4-Cedula: ",cedula_4," Nombre: ",nombre_4," Telefono: ",telefono_4," Nota: ",nota_4;
+                                        Escribir "5-Cedula: ",cedula_5," Nombre: ",nombre_5," Telefono: ",telefono_5," Nota: ",nota_5;
+                                        Escribir "6-Cedula: ",cedula_6," Nombre: ",nombre_6," Telefono: ",telefono_6," Nota: ",nota_6;
+                                        Escribir "7-Cedula: ",cedula_7," Nombre: ",nombre_7," Telefono: ",telefono_7," Nota: ",nota_7;
+                                        Escribir "8-Cedula: ",cedula_8," Nombre: ",nombre_8," Telefono: ",telefono_8," Nota: ",nota_8;
+                                      FinSi
+                                    FinSi
+                                  FinSi
+                                FinSi
+                              FinSi
+                            FinSi
+                          FinSi
+                        FinSi
+                      FinSi
+                  FinSegun
+                3:
+                  Escribir "______________________Cerrando Sistema______________________";
+                De Otro Modo:
+                  Escribir "__________________La opcion Elegida no existe_______________";
+              FinSegun
+            Hasta Que opcion = 3
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+      </article>
+      <footer>
+        <h2 class="texto2" id="t2"><dd>Contacto</dd></h2>
+
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>

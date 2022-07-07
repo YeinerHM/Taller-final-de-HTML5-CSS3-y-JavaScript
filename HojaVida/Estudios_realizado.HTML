@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/HojaVida/CSS/index.css" />
+    <script src="/HojaVida/JS/index.js"></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="temaPermanente(); accordion()">
+    <header>
+      <nav>
+        <a class="btn" href="/HojaVida/HV.HTML">Inicio</a>
+        <a class="btn" href="/HojaVida/Experiencia_laboral.HTML">Experiencia laboral</a>
+        <a class="btn" href="/HojaVida/Estudios_realizado.HTML">Estudios realizados</a>
+        <a class="btn" href="/HojaVida/Referencias_personales.HTML"
+          >Referencias Personales</a
+        >
+        <a class="btn" href="/HojaVida/Referencias_familiares.HTML"
+          >Referencias Familiares</a
+        >
+        <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      <a class="btn" onclick="selecTema1()" id="tema1">Tema 1</a>
+      <a class="btn" onclick="selecTema2()" id="tema2">Tema 2</a>
+      <a class="btn" onclick="selecTema3()" id="tema3">Tema 3</a>
+      <a class="btn" onclick="selecTema4()" id="tema4">Tema 4</a>
+
+      <h1 id="t1">Estudios realizados</h1>
+      <article>
+        <button class="accordion" id="tt2">
+          Ingeniero en Sistemas | Universidad de Cartagena
+        </button>
+        <div class="caja">
+          <ul class="texto2">
+            <li>ENERO 2015 – AGOSTO 2021</li>
+          </ul>
+        </div>
+
+        <button class="accordion" id="tt3">
+          Google IT Support Professional Certificate | Grow with Google
+        </button>
+        <div class="caja">
+          <ul class="texto2">
+            <li>SEPTIEMBRE 2020 - JULIO 2021</li>
+          </ul>
+        </div>
+
+        <button class="accordion" id="tt4">
+          Técnico en Seguridad Informática (Análisis de Riesgos) | Capacítate
+          para el empleo (Fundación Carlos Slim)
+        </button>
+        <div class="caja">
+          <ul class="texto2">
+            <li>MAYO 2016 - MAYO 2016</li>
+          </ul>
+        </div>
+
+        <button class="accordion" id="tt5">ACTIVIDADES</button>
+        <div class="caja">
+          <ul class="texto2">
+            <li>
+              -Ingeniero en sistemas: conocimiento en creación y gestión de
+              bases de datos con SQL, programación de Frontend en HTML,CSS y
+              JavaScript control de versiones con Git e instalación y soporte de
+              máquinas virtuales de VMware.
+            </li>
+            <li>
+              -Utilizar el conocimiento del sistema operativo para solucionar
+              problemas comunes en un rol de Especialista de soporte de TI.
+            </li>
+            <li>
+              -Sistemas Operativos: Windows, Linux, Mac OS, experiencia en
+              asesoría para la adquisición, implementación, soporte y puesta en
+              marcha de tecnología hardware, Software como solución al
+              mejoramiento y aprovechamiento de los procesos empresariales
+            </li>
+            <li>
+              -Help Desk: con más de 6 años de experiencia en TI, soporte
+              técnico en mantenimientos de equipos informáticos.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <footer>
+        <h2 class="texto2" id="t2"><dd>Contacto</dd></h2>
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>

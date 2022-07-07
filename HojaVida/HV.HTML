@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/HojaVida/CSS/index.css" />
+    <script src="/HojaVida/JS/index.js"></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="temaPermanente()">
+    <header>
+      <nav>
+        <a class="btn" href="/HojaVida/HV.HTML">Inicio</a>
+        <a class="btn" href="/HojaVida/Experiencia_laboral.HTML">Experiencia laboral</a>
+        <a class="btn" href="/HojaVida/Estudios_realizado.HTML">Estudios realizados</a>
+        <a class="btn" href="/HojaVida/Referencias_personales.HTML"
+          >Referencias Personales</a
+        >
+        <a class="btn" href="/HojaVida/Referencias_familiares.HTML"
+          >Referencias Familiares</a
+        >
+        <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      <a class="btn" onclick="selecTema1()" id="tema1">Tema 1</a>
+      <a class="btn" onclick="selecTema2()" id="tema2">Tema 2</a>
+      <a class="btn" onclick="selecTema3()" id="tema3">Tema 3</a>
+      <a class="btn" onclick="selecTema4()" id="tema4">Tema 4</a>
+      <section>
+        <h1 id="t1">Yeiner Hidalgo Molina</h1>
+        <img id="foto" class="foto" src="/HojaVida/IMG/perfil.jpg" alt="IMG_Perfil" />
+        <h3>
+          Objetivo: <br />Contribuir al crecimiento y prestigio de la empresa
+          aportando con mis conocimientos y aptitudes, buscando siempre la
+          excelencia con un profundo sentido de la responsabilidad, así como la
+          innovación continua.
+        </h3>
+        <br />
+        <h2>
+          <a id="t2" href="Experiencia_laboral.HTML">Experiencia labora</a>
+        </h2>
+        <ul>
+          Help desk
+          <li>Ingeniero de Soporte Nivel 2</li>
+          <li>Ingeniero de Soporte de nivel 1</li>
+          <li>Soporte de TI (Help Desk)</li>
+          <li>Analista Bases de Datos</li>
+          <li>Analista de Datos</li>
+        </ul>
+        <br />
+        <h2>
+          <a id="t3" href="Estudios_realizado.HTML">Estudios realizados</a>
+        </h2>
+        <ul>
+          <li>Ingeniero de Sistemas</li>
+          <li>Tecnico de Sistemas</li>
+          <li>Técnico en Seguridad Informática</li>
+        </ul>
+        <br />
+        <h2 class="texto">
+          <a href="Referencias_personales.HTML">Referencias personales</a>
+        </h2>
+        <h2 class="texto">
+          <a href="Referencias_familiares.HTML">Referencias familiares</a>
+        </h2>
+        <br />
+      </section>
+      <footer>
+        <h2 class="texto2" id="t4"><dd>Contacto</dd></h2>
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+        <br />
+        <a
+          id="descarga"
+          class="btn_descarga"
+          href="PDF/CV_Yeiner_Hidalgo_Molina.pdf"
+          target="_blank"
+          >Descargar CV</a
+        >
+        <br />
+        <br />
+      </footer>
+    </main>
+  </body>
+</html>

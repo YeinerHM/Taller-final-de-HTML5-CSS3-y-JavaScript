@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Formulario/CSS/index.css">
+    <script src="/Formulario/JS/index.js"></script>
+    <title>Menu</title>
+  </head>
+
+  <body>
+
+    <main class="pag">
+      
+      <h1>Formulario de contacto</h1>
+      <br>
+        <form id="form">
+            <label for="user">
+              <input id="user" name="user" type="text" placeholder="Nombre" autocomplete="off" required >
+            </label>
+            
+            <label for="email">
+              <input id="email" name="email" type="email" placeholder="Correo: Ejemplo@web.com" autocomplete="off" required  >
+            </label>
+           
+            <label for="affair">
+              <input id="affair" name="affair" type="text" placeholder="Asunto" autocomplete="off" required  >
+            </label>
+            
+            <label for="message">
+              <textarea class="message" id="message" name="message" type="text" placeholder="Mensaje" required ></textarea>
+            </label> 
+            <br>
+            <button type="submit" onclick="formu()">Enviar</button>
+            <button type="submit" onclick="reset()">Borrar</button>
+            <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+        </form>
+
+      <footer>
+        <ul>
+            <h2><dd>Contacto</dd></h2>
+            <li><dd>Celular: <a href="tel:+573005970871">3005970871</a></dd></li>
+            <li><dd>Email: <a href="mailto:Yeinerhidalgomolina@gmail.com">Yeinerhidalgomolina@gmail.com</a></dd></li>
+            <li><dd>Dirección: Calle 15 #4A-34</dd></li></ul><br/>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Talleres/CSS/index.css" />
+    <script src="/Talleres/JS/index.js"></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="accordion();">
+    <header>
+      <nav>
+        <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+        <a class="btn_menu" href="/Talleres/TMenu.html">Menu de Talleres</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      
+
+      <h1 id="t1">Talleres en Java - Realizar el taller #2 de PSeInt en Java</h1>
+      <article>
+        
+        <button class="accordion">Punto 1</button>
+        <div class="caja">
+          <h3>1-Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            import Paquete1.Punto1;
+
+
+            public class Main {
+            
+                public static void main(String[] args) {
+                    Punto1 punto = new Punto1();
+                    punto.Punto1();
+                }
+                
+            }
+            
+           </code></pre>
+           <p>Codigo Punto1:</p>
+           <pre><code>
+            package Paquete1;
+
+            import java.util.Scanner;
+            
+            public class Punto1 {
+                
+                private int edad;
+                private Scanner input = new Scanner (System.in);
+                
+                
+                
+                public void Punto1(){
+                    leerEdad();
+                    edad = capturarDatoInt();
+                    
+                    if (edad >= 18){
+                        imprimirMayor();
+                    }else{
+                        imprimirMenor();
+                    }
+                    
+                    
+                }
+                
+                private void leerEdad(){System.out.print("Por favor digite su edad: ");}
+                private void imprimirMayor(){System.out.println("Es mayor de edad");}
+                private void imprimirMenor(){System.out.println("Es menor de edad");}
+                
+                
+                private int capturarDatoInt(){return input.nextInt();}
+            }
+           </code></pre>
+        </div>
+
+
+        <button class="accordion">Punto 2</button>
+        <div class="caja">
+          <h3>2-Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            import Paquete2.Punto2;
+
+
+            public class Main {
+            
+                public static void main(String[] args) {
+                    Punto2 punto = new Punto2();
+                    punto.Punto2();
+                }
+                
+            }
+           </code></pre>
+           <p>Codigo Punto2:</p>
+           <pre><code>
+            package Paquete2;
+
+            import java.util.Scanner;
+            
+            public class Punto2 {
+                
+                private int edad;
+                private Scanner input = new Scanner (System.in);
+                
+                
+                
+                public void Punto2(){
+                    leerEdad();
+                    edad = capturarDatoInt();
+                    
+                    if (edad >= 18){
+                        imprimirMayor();
+                    }else{
+                        imprimirMenor();
+                    }
+                    
+                    
+                }
+                
+                private void leerEdad(){System.out.print("Por favor digite su edad: ");}
+                private void imprimirMayor(){System.out.println("Es mayor de edad");}
+                private void imprimirMenor(){System.out.println("Usted aún es un niño(a).");}
+                
+                
+                private int capturarDatoInt(){return input.nextInt();}
+            }
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 3</button>
+        <div class="caja">
+          <h3>3-Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            import Paquete3.Punto3;
+
+
+            public class Main {
+            
+                public static void main(String[] args) {
+                    Punto3 punto = new Punto3();
+                    punto.Punto3();
+                }
+                
+            }
+            
+           </code></pre>
+           <p>Codigo Punto3:</p>
+           <pre><code>
+            package Paquete3;
+
+            import java.util.Scanner;
+            
+            public class Punto3 {
+                
+                private String nombre,apellidos;
+                private int edad;
+                private Scanner input = new Scanner (System.in);
+                
+                
+                
+                public void Punto3(){
+                    
+                    leerNombre();
+                    nombre = capturarDatoString();
+                    
+                    leerApellidos();
+                    apellidos = capturarDatoString();
+                    
+                    leerEdad();
+                    edad = capturarDatoInt();
+                    
+                    if (edad >= 18){
+                        imprimirMayor();
+                    }else{
+                        imprimirMenor();
+                    }
+                    
+                    
+                }
+                private void leerNombre(){System.out.print("Por favor digite su nombre: ");}
+                private void leerApellidos(){System.out.print("Por favor digite sus apellidos: ");}
+                private void leerEdad(){System.out.print("Por favor digite su edad: ");}
+                private void imprimirMayor(){System.out.println(nombre+" "+apellidos+" usted es mayor de edad, por lo tanto puede entrar a la fiesta.");}
+                private void imprimirMenor(){System.out.println(nombre+" "+apellidos+" usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.");}
+                
+                private String capturarDatoString(){return input.nextLine();}
+                private int capturarDatoInt(){return input.nextInt();}
+            }
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 4</button>
+        <div class="caja">
+          <h3>4-La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            package Paquete4;
+
+            import java.util.ArrayList;
+            import java.util.Scanner;
+            
+            public class Main {
+                static Scanner leer = new Scanner(System.in);
+                static Scanner leerString = new Scanner(System.in);
+                static String titulo;
+                static Boolean disponible;
+                static int opcion;
+                static ArrayList<Pelicula> PeliculasArray = new ArrayList<>();
+            
+                public static void main(String[] args){
+                    Pelicula peli1 = new Pelicula("Batman",true,"Exlente");
+                    Pelicula peli2 = new Pelicula("El Transportador",true, "Exlente");
+                    Pelicula peli3 = new Pelicula("Carnage",true, "Exlente");
+                    Pelicula peli4 = new Pelicula("Chuky",true,"Exlente");
+                    Pelicula peli5 = new Pelicula("Ana Belle",true, "Exlente");
+                    Pelicula peli6 = new Pelicula("Casadores de fantasmas",true, "Exlente");
+                    Pelicula peli7 = new Pelicula("Encanto",true,"Exlente");
+                    Pelicula peli8 = new Pelicula("Even Mice Belong in Heaven",true, "Exlente");
+                    Pelicula peli9 = new Pelicula("Rumble",true, "Exlente");
+            
+                    PeliculasArray.add(peli1);
+                    PeliculasArray.add(peli2);
+                    PeliculasArray.add(peli3);
+                    PeliculasArray.add(peli4);
+                    PeliculasArray.add(peli5);
+                    PeliculasArray.add(peli6);
+                    PeliculasArray.add(peli7);
+                    PeliculasArray.add(peli8);
+                    PeliculasArray.add(peli9);
+                    
+                    do{
+                        System.out.println("""
+                                           ============== Menu ==================
+                                           |1-Consultar peliculas Disponibles    |
+                                           |2-Alquiler de peliculas              |
+                                           |3-Recibir o Devolver pelicula        |
+                                           |9-Salir del Menu                     |
+                                           =======================================""");
+                        opcion = leer.nextInt();
+                        switch (opcion){
+                            case 1 -> {System.out.println("====================================");
+                                System.out.println("Peliculas disponibles: ");
+                                for(int i = 0; i < 9; i++){
+                                    if(PeliculasArray.get(i).getDisponible()){
+                                        System.out.println("|"+i+": "+PeliculasArray.get(i).getTitulo()+", "+PeliculasArray.get(i).getDanos());
+                                    } else {
+                                    }
+                                }
+                                System.out.println("==========================================");
+                                break;
+                            }
+                            case 2 -> {System.out.println("");
+                                opcion = 0;
+                                System.out.println("Alquiler de peliculas");
+                                for(int i = 0; i < 9; i++){
+                                    if(PeliculasArray.get(i).getDisponible()){
+                                        System.out.println("|"+i+": "+PeliculasArray.get(i).getTitulo());
+                                    }
+                                }
+                                opcion = leer.nextInt();
+                                System.out.println("\nAlquiló: "+PeliculasArray.get(opcion).getTitulo());
+                                PeliculasArray.get(opcion).setDisponible(false);
+                                System.out.println("=============================================");
+                                break;
+                            }
+                            case 3 -> {
+                                System.out.println("Devolver: ");
+                                for(int i = 0; i < 9; i++){
+                                    if(!(PeliculasArray.get(i).getDisponible())){
+                                        System.out.println("|"+i+": "+PeliculasArray.get(i).getTitulo());
+                                    }
+                                }
+                                opcion = leer.nextInt();
+                                System.out.println("Devolver pelicula: "+PeliculasArray.get(opcion).getTitulo());
+                                PeliculasArray.get(opcion).setDisponible(true);
+                                System.out.println("\n ¿La pelicula presenta daños? \n1.si \n2.no");
+                                if(leer.nextInt()==1) {System.out.println("\n Nota de Daños: ");
+                                    PeliculasArray.get(opcion).setDanos(leerString.nextLine());
+                                    System.out.println("\nRegresó la pelicula: " + PeliculasArray.get(opcion).getTitulo() + ", con daños: " + PeliculasArray.get(opcion).getDanos());
+                                }else{System.out.println("\n No hay daños");
+                                }
+                                System.out.println("===============================================");
+                            }
+                            case 9 -> System.out.println("\nCerrando Sistema");
+                            default -> System.out.println("opcion invalida: " + opcion);
+                        }
+                    }while(opcion != 9);
+                }
+            }
+           </code></pre>
+           <p>Codigo Pelicula:</p>
+           <pre><code>
+            package Paquete4;
+
+            public class Pelicula{
+                private String titulo;
+                private Boolean disponible;
+                private String danos;
+            
+                public Pelicula(String titulo, Boolean disponible, String danos) {
+                    this.titulo = titulo;
+                    this.disponible = disponible;
+                    this.danos = danos;
+                }
+            
+                
+            
+                public String getTitulo(){
+                    return titulo;
+                }
+            
+                public void setTitulo(String titulo){
+                    this.titulo = titulo;
+                }
+            
+                public Boolean getDisponible(){
+                    return disponible;
+                }
+            
+                public void setDisponible(Boolean disponible){
+                    this.disponible = disponible;
+                }
+            
+                public String getDanos(){
+                    return danos;
+                }
+            
+                public void setDanos(String danos) {
+                    this.danos = danos;
+                }
+            
+            }
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 5</button>
+        <div class="caja">
+          <h3>1-La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            package Paquete5;
+
+            import java.util.ArrayList;
+            import java.util.Scanner;
+            
+            public class Main {
+                static Scanner leer = new Scanner(System.in);
+                static Scanner leerString = new Scanner(System.in);
+                static String nombre;
+                static Boolean disponible;
+                static int opcion;
+                static ArrayList<Medicamento> MediacamentoArray = new ArrayList<>();
+            
+                public static void main(String[] args){
+                    Medicamento Medicamento1 = new Medicamento("Crema Solar X","Proteccion solar por 12 horas contra los rayos uv",35,true,"Entienda");
+                    Medicamento Medicamento2 = new Medicamento("Desodorante FG","Proteccion contra el mal olor 24 horas",22,true,"Entienda");
+                    Medicamento Medicamento3 = new Medicamento("Pasta dental KM"," Pasta dental con fluor y proteccion contra la placa",18,true,"Entienda");
+                    Medicamento Medicamento4 = new Medicamento("Dolex","Para malestar general",5,true,"Entienda");
+                    Medicamento Medicamento5 = new Medicamento("Vitamina c","Evita resfriado comun",10,true,"Entienda");
+                    Medicamento Medicamento6 = new Medicamento("Alcohol","Desinfectante",12,true,"Entienda");
+                    Medicamento Medicamento7 = new Medicamento("Gel RML","Gel antibacterial",2,true,"Entienda");
+            
+                    MediacamentoArray.add(Medicamento1);
+                    MediacamentoArray.add(Medicamento2);
+                    MediacamentoArray.add(Medicamento3);
+                    MediacamentoArray.add(Medicamento4);
+                    MediacamentoArray.add(Medicamento5);
+                    MediacamentoArray.add(Medicamento6);
+                    MediacamentoArray.add(Medicamento7);
+                    
+                    do{
+                        System.out.println("""
+                                           ======== Droguería Mi Salud ===========
+                                           |1-Consulta de Precios                |
+                                           |2-Compra de producto                 |
+                                           |3-Devoluciones                       |
+                                           |7-salir                              |
+                                           =======================================""");
+                        opcion = leer.nextInt();
+                        switch (opcion){
+                            case 1 -> {System.out.println("===============================================================================================================");
+                                System.out.println("===================================================Productos===================================================");
+                                for(int i = 0; i < 7; i++){
+                                    if(MediacamentoArray.get(i).getDisponible()){
+                                        System.out.println("|"+i+": "+MediacamentoArray.get(i).getNombre()+": "+MediacamentoArray.get(i).getDescripcion()+", Precio: $"+MediacamentoArray.get(i).getPrecio()+" Disponible: "+MediacamentoArray.get(i).getDevolucion());
+                                    } else {
+                                    }
+                                }
+                                System.out.println("===============================================================================================================");
+                                break;
+                            }
+                            case 2 -> {System.out.println("");
+                                opcion = 0;
+                                System.out.println("Comprar Medicamento");
+                                for(int i = 0; i < 7; i++){
+                                    if(MediacamentoArray.get(i).getDisponible()){
+                                        System.out.println("|"+i+": "+MediacamentoArray.get(i).getNombre());
+                                    }
+                                }
+                                opcion = leer.nextInt();
+                                System.out.println("\nCompro: "+MediacamentoArray.get(opcion).getNombre());
+                                MediacamentoArray.get(opcion).setDisponible(false);
+                                System.out.println("===============================================================================================================");
+                                break;
+                            }
+                            case 3 -> {
+                                System.out.println("Devolver: ");
+                                for(int i = 0; i < 7; i++){
+                                    if(!(MediacamentoArray.get(i).getDisponible())){
+                                        System.out.println("|"+i+": "+MediacamentoArray.get(i).getNombre());
+                                    }
+                                }
+                                opcion = leer.nextInt();
+                                System.out.println("Devolver Medicamento: "+MediacamentoArray.get(opcion).getNombre());
+                                MediacamentoArray.get(opcion).setDisponible(true);
+                                System.out.println("\n ¿Quiere agregar motivo de la devolucion? \n1.si \n2.no");
+                                if(leer.nextInt()==1) {System.out.println("\n Nota de devolucion: ");
+                                    MediacamentoArray.get(opcion).setDevolucion(leerString.nextLine());
+                                    System.out.println("\nDevolvio: " + MediacamentoArray.get(opcion).getNombre() + ", Nota: " + MediacamentoArray.get(opcion).getDevolucion());
+                                }else{System.out.println("\n Sin Nota");
+                                }
+                                System.out.println("===============================================================================================================");
+                            }
+                            case 7 -> System.out.println("\nCerrando Sistema");
+                            default -> System.out.println("opcion invalida: " + opcion);
+                        }
+                    }while(opcion != 7);
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo Medicamento:</p>
+           <pre><code>
+            package Paquete5;
+
+            public class Medicamento{
+                private String nombre;
+                private String descripcion;
+                private int Precio;
+                private Boolean disponible;
+                private String devolucion;
+            
+                public Medicamento(String nombre, String descripcion, int Precio, Boolean disponible, String devolucion) {
+                    this.nombre = nombre;
+                    this.descripcion = descripcion;
+                    this.Precio = Precio;
+                    this.disponible = disponible;
+                    this.devolucion = devolucion;
+                }
+            
+            
+                public String getNombre() {
+                    return nombre;
+                }
+            
+                public void setNombre(String nombre) {
+                    this.nombre = nombre;
+                }
+            
+                public String getDescripcion() {
+                    return descripcion;
+                }
+            
+                public void setDescripcion(String descripcion) {
+                    this.descripcion = descripcion;
+                }
+            
+                public double getPrecio() {
+                    return Precio;
+                }
+            
+                public void setPrecio(int Precio) {
+                    this.Precio = Precio;
+                }
+            
+                public Boolean getDisponible() {
+                    return disponible;
+                }
+            
+                public void setDisponible(Boolean disponible) {
+                    this.disponible = disponible;
+                }
+            
+                public String getDevolucion() {
+                    return devolucion;
+                }
+            
+                public void setDevolucion(String devolucion) {
+                    this.devolucion = devolucion;
+                }
+                
+                
+                
+                
+            }
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 6</button>
+        <div class="caja">
+          <h3>6-El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete6;
+
+
+            import java.util.ArrayList;
+            import java.util.Scanner;
+            
+            public class Main {
+                static Scanner leer = new Scanner(System.in);
+                static Scanner leerS = new Scanner(System.in);
+                static String obsCliente,nombreCliente,respuesto,novedades,volver;
+                static int opcion;
+                static int contador = 0;
+                static ArrayList<Entrada> ingreso = new ArrayList<>();
+                static ArrayList<Salida> salida = new ArrayList<>();
+                public static void main(String[] args){
+                    do{
+                        System.out.println("""
+                                |=======Taller de Motos ========|
+                                |========El Maquinista==========|
+                                |Menu:                          |
+                                |1-Ingreso                      |
+                                |2-Salida del taller            |
+                                |3-Cancelar y Salir             |
+                                |===============================|""");
+                        opcion = leer.nextInt();
+                        if(opcion==1){
+                            System.out.println("Ingrese el Nombre del cliente");
+                                nombreCliente = leerS.nextLine();
+                                System.out.println("Ingrese las observaciónes dadas por el cliente: ");
+                                obsCliente = leerS.nextLine();
+                                Entrada moto = new Entrada(nombreCliente,obsCliente);
+                                ingreso.add(moto);
+                                contador ++;
+                                System.out.println("\nNombre del Dueño: "+nombreCliente+
+                                        "\nobservaciónes del cliente: "+ingreso.get(contador-1).getObsCliente());
+                                System.out.println("\nEnter para Volver al Menu");
+                                volver = leerS.nextLine();
+                        }else{
+                            if(opcion==2){
+                               if (contador == 0){
+                                    System.out.println("No hay Vehiculos en el taller");
+                                }else{
+                                    System.out.println("Salida de Motos");
+                                    System.out.println("Ingrese los respuestos y materials usados");
+                                    respuesto = leerS.nextLine();
+                                    System.out.println("Novedades: ");
+                                    novedades = leerS.nextLine();
+                                    Salida salidaMoto = new Salida(respuesto,novedades);
+                                    salida.add(salidaMoto);
+                                    System.out.println("\n============Salida del Vehiculo=========== "+"\nDueño; "+ingreso.get(contador-1).getNombreCliente()+"\nRespuestos: "+salida.get(contador-1).getRespuesto()+"\nObservaciones del cliente: "+ingreso.get(contador-1).getObsCliente()+"\nnovedades: "+salida.get(contador-1).getNovedades());
+                                    System.out.println("\nEnter para Volver al Menu");
+                                    volver = leerS.nextLine();
+                                } 
+                            }
+                        }
+                        if(opcion==3){
+                            System.out.println("\nCerrando Sistema");
+                        }else{
+                            if(opcion>3){
+                                System.out.println("opcion invalida: " + opcion);
+                            }
+                        }  
+                    }while (opcion != 3);
+                }
+            }
+            
+            
+           </code></pre>
+
+           <p>Codigo Entrada:</p>
+           <pre><code>
+
+            package Paquete6;
+
+            public class Entrada{
+                private String nombreCliente;
+                private String obsCliente;
+            
+                public Entrada(String nombreCliente, String obsCliente) {
+                    this.nombreCliente = nombreCliente;
+                    this.obsCliente = obsCliente;
+                }
+            
+                public String getNombreCliente() {
+                    return nombreCliente;
+                }
+            
+                public void setNombreCliente(String nombreCliente) {
+                    this.nombreCliente = nombreCliente;
+                }
+            
+                public String getObsCliente() {
+                    return obsCliente;
+                }
+            
+                public void setObsCliente(String obsCliente) {
+                    this.obsCliente = obsCliente;
+                }
+                
+            }
+           </code></pre>
+
+           <p>Codigo Salida:</p>
+           <pre><code>
+
+            package Paquete6;
+
+
+            public class Salida {
+                private String respuesto;
+                private String novedades;
+            
+                public Salida(String respuesto, String novedades) {
+                    this.respuesto = respuesto;
+                    this.novedades = novedades;
+                }
+            
+                public String getRespuesto() {
+                    return respuesto;
+                }
+            
+                public void setRespuesto(String respuesto) {
+                    this.respuesto = respuesto;
+                }
+            
+                public String getNovedades() {
+                    return novedades;
+                }
+            
+                public void setNovedades(String novedades) {
+                    this.novedades = novedades;
+                }
+            
+                
+            }
+            
+           </code></pre>
+
+        </div>
+
+        <button class="accordion" id="tt3">Punto 7</button>
+        <div class="caja">
+          <h3>7-La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete7;
+
+
+            import java.util.Scanner;
+            
+            public class Main {
+                static Scanner leer = new Scanner(System.in);
+                public static void main(String[] args){
+                    int opcion;
+                    do{
+                        System.out.println("Secretaria de Salud Municipal");
+                        System.out.println("Ingrese su Peso en kilogramos");
+                        float peso = leer.nextFloat();
+                        System.out.println("Ingrese su Altura en metros");
+                        float estatura = leer.nextFloat();
+                        float indice = (float) Imc.IMC(peso,estatura);
+                        System.out.println("Su IMC es: "+indice);
+                        if(indice < 18.5){
+                            System.out.println("Bajo peso");
+                        }else if(indice >= 18.5 && indice < 24.9){
+                            System.out.println("Normal");
+                        }else if(indice >= 25 && indice < 30){
+                            System.out.println("sobre peso");
+                        }else if(indice >= 30){
+                            System.out.println("Obeso");
+                        }
+                        System.out.println("""
+                                           1-Volver
+                                           2-Salir""");
+                        opcion = leer.nextInt();
+                        if(opcion==2){
+                            System.out.println("\nCerrando Sistema");
+                        }
+                    }while(opcion != 2);
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo IMC:</p>
+           <pre><code>
+
+            package Paquete7;
+
+            public class Imc {
+                private float peso;
+                private float altura;
+                
+                public static double IMC(float peso,float altura){
+                    altura = altura*altura;
+                    double imc = peso/altura;
+                    return imc;
+                }
+            }
+            
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 8</button>
+        <div class="caja">
+          <h3>8-El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete8;
+
+
+            import java.util.ArrayList;
+            import java.util.Scanner;
+            
+            public class Main {
+                public static Scanner leer = new Scanner(System.in);
+                public static Scanner leerS = new Scanner(System.in);
+                public static Torta torta;
+                public static int disponibilidad = 6;
+                public static int opcion;
+                public static String enter;
+                public static ArrayList<Torta> ventas = new ArrayList<>();
+            
+                public static void main(String[] args) {
+                    menu();
+                }
+                public static Torta tortas(){
+                    String sabor;
+                    int porciones = 0;
+                    String decoracion;
+                    System.out.print("\nDigite sabor de la torta: ");
+                    sabor = leerS.nextLine();
+                    while (porciones <= 0) {
+                        System.out.print("\nCuantas porciones: ");
+                        porciones = leer.nextInt();
+                    }
+                    System.out.print("\nDigite decoracion de la torta: ");
+                    decoracion = leerS.nextLine();
+                    torta = new Torta(sabor, porciones, decoracion);
+                    System.out.println("Pedido realizado"+"\nEnter para Volver");
+                    enter = leerS.nextLine();
+                    disponibilidad--;
+                    return torta;
+                }
+            
+                public static void menu(){
+                    do {
+                        System.out.println("""
+                                |====Pasteleria Don Carlos====|
+                                |=========== Menu ============|
+                                |1-Pedidos                    |
+                                |2-Tortas disponibles         |
+                                |3-Ventas                     |
+                                |4-Cerrar Programa            |
+                                |=============================|""");
+                        opcion = leer.nextInt();
+                        if(opcion==1){
+                            ventas.add(tortas());
+                        }else{
+                            if(opcion==2){
+                                System.out.println("\nTortas disponibles "+disponibilidad+"\nEnter para continuar");
+                                enter = leerS.nextLine();
+                            }else{
+                                if(opcion==3){
+                                    if (ventas.size() < 1) {
+                                    System.out.println("No hay pedidos"+"\nEnter para continuar");
+                                    enter = leerS.nextLine();
+                                } else {
+                                    System.out.println("Pedidos: ");
+                                    System.out.println( ventas.size()+" Tortas vendidas");
+                                    for (int i = 0; i < ventas.size(); i++) {
+                                        System.out.println("============================================================");
+                                        System.out.println((i + 1)+". Sabor: " + ventas.get(i).getSabor()+" | porciones: "+ventas.get(i).getPorciones()+" | decoración: "+ventas.get(i).getDecoracion());
+                                        System.out.println("============================================================");
+                                    }
+                                    System.out.println("\nEnter para volver");
+                                    enter = leerS.nextLine();
+                                }
+                                }
+                            }
+                        }if(opcion==4){
+                            System.out.println("=======Cerrando Sistema=======");
+                        }
+                    } while (opcion != 4);
+                }
+                
+            }
+            
+           </code></pre>
+           <p>Codigo Torta:</p>
+           <pre><code>
+
+            package Paquete8;
+
+
+            public class Torta {
+                private String sabor;
+                private int porcione;
+                private String decoracion;
+            
+                public Torta(String sabor, int porciones, String decoracion) {
+                    this.sabor = sabor;
+                    this.porcione = porciones;
+                    this.decoracion = decoracion;
+                }
+            
+                public String getSabor() {
+                    return sabor;
+                }
+            
+                public void setSabor(String sabor) {
+                    this.sabor = sabor;
+                }
+            
+                public int getPorciones() {
+                    return porcione;
+                }
+            
+                public void setPorciones(int porciones) {
+                    this.porcione = porciones;
+                }
+            
+                public String getDecoracion() {
+                    return decoracion;
+                }
+            
+                public void setDecoracion(String decoracion) {
+                    this.decoracion = decoracion;
+                }
+                
+            }
+            
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 9</button>
+        <div class="caja">
+          <h3>9-El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Pauete9;
+
+            import java.util.Scanner;
+            
+            
+            public class Main {
+                static Scanner leer = new Scanner(System.in);
+                public static void main(String[] args) {
+                    int opcion;
+                    do{
+                       System.out.println("""
+                                   |===Calcular el area===|
+                                   |1-Rectangulo          |
+                                   |2-Triangulo           |
+                                   |3-Trapecio           |
+                                   |4-Cerrar             |
+                                   |======================|""");
+                       opcion = leer.nextInt();
+                       if(opcion==1){
+                            System.out.println("=======Rectangulo=======");
+                            System.out.println("Digite Base");
+                            float base = leer.nextFloat();
+                            System.out.println("Digite Altura");
+                            float altura = leer.nextFloat();
+                            float area = (float) Area.AreaRectangulo(base,altura);
+                            System.out.println("El Area del Rectangulo es: "+area);
+                       }else{
+                           if(opcion==2){
+                                System.out.println("=======Triangulo=======");
+                                System.out.println("Digite Base");
+                                float base = leer.nextFloat();
+                                System.out.println("Digite Altura");
+                                float altura = leer.nextFloat();
+                                float area = (float) Area.AreaTriangulo(base,altura);
+                                System.out.println("El Area del Triangulo es: "+area);
+                           }else{
+                               if(opcion==3){
+                                    System.out.println("=======Trapecio=======");
+                                    System.out.println("Digite Base 1");
+                                    float base = leer.nextFloat();
+                                    System.out.println("Digite Base 2");
+                                    float base2 = leer.nextFloat();
+                                    System.out.println("Digite Altura");
+                                    float altura = leer.nextFloat();
+                                    float area = (float) Area.AreaTrapecio(base,base2,altura);
+                                    System.out.println("El Area del Trapecio es: "+area);
+                               }
+                           }
+                       }
+                       if(opcion>4){
+                           System.out.println("Opcion invalida: " + opcion);
+                       }
+                    }while(opcion != 4);
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo Area:</p>
+           <pre><code>
+
+            package Pauete9;
+
+
+            public class Area {
+                private float base;
+                private float base2;
+                private float altura;
+                
+                public static double AreaRectangulo(float base,float altura){
+                    double area = base*altura;
+                    return area;
+                }
+                
+                public static double AreaTriangulo(float base,float altura){
+                    double area = base*altura/2;
+                    return area;
+                }
+                
+                public static double AreaTrapecio(float base,float base2,float altura){
+                    base = base+base2;
+              double area = base*altura;
+              area = area/2;
+                    return area;
+                }
+                
+            }
+            
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 10</button>
+        <div class="caja">
+          <h3>10-El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete10;
+
+            import java.util.Scanner;
+            
+            
+            public class Main {
+                static Scanner leer = new Scanner(System.in);
+                public static void main(String[] args) {
+                    int opcion;
+                    String titular="None";
+                    int cuenta=0;
+                    float deposito;
+                    float saldo= 0;
+                    int retiro;
+                    
+                    do{
+                       System.out.println("""
+                                   |======Su banco fiel=====|
+                                   |1-Ingreso               |
+                                   |2-Retiro                |
+                                   |3-Consultar Saldo       |
+                                   |4-Salir                 |
+                                   |========================|""");
+                       opcion = leer.nextInt();
+                       switch (opcion) {
+                            case 1 -> {
+                                leer.nextLine();
+                                System.out.println("===========Ingreso==========");
+                                System.out.println("Por favor ingres el nombre del Titular de la cuenta");
+                                titular = leer.nextLine();
+                                System.out.println("Por favor digite su numero de cuenta");
+                                cuenta = leer.nextInt();
+                                System.out.println("Por favor digite el Monto a ingresar");
+                                deposito = leer.nextInt();
+                                saldo = Cuenta.Ingreso(deposito,saldo);
+                                if(deposito >= 1){
+                                    System.out.println("=========================================");
+                                    System.out.println("Transaccion Exitosa por ingreso de: "+deposito);
+                                    System.out.println("=========================================");
+                                }else{
+                                    System.out.println("El monto minimo es 1");
+                                }
+                            }
+                            case 2 -> {
+                                if("None".equals(titular)){
+                                    System.out.println("No hay Cuenta creada");
+                                }else{
+                                    System.out.println("===========Retiro==========");
+                                    System.out.println("Ingrese la cantidad que quiere retetirar");
+                                    retiro = leer.nextInt();
+                                    if (retiro<=saldo){
+                                        saldo = Cuenta.Retiro(retiro, saldo);
+                                        System.out.println("Retiro exitoso de: "+retiro+" Saldo en cuenta: "+saldo);
+                                    }else{
+                                        System.out.println("No cuenta con los fondos necesarios para el retiro");
+                                    }
+                                }
+                            }
+            
+                            case 3 -> {
+                                if("None".equals(titular)){
+                                    System.out.println("No hay Cuenta creada");
+                                }
+                                System.out.println("El titular: "+titular+" de la Cuenta: "+cuenta+" Tiene una cantidad de: "+saldo+".");
+                            }
+                        }
+                    }while(opcion != 4);
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo Cuenta:</p>
+           <pre><code>
+
+            package Paquete10;
+
+
+            public class Cuenta {
+                private float saldo;
+                private float retiro;
+                private float deposito;
+            
+             
+                public static float Ingreso(float deposito,float saldo){
+                    if(deposito >= 1){
+                        saldo = deposito; 
+                    }
+                    return saldo;
+                }
+                
+                public static float Retiro(float retiro,float saldo){
+                    saldo = saldo-retiro;   
+                    return saldo;
+                }
+                
+                
+            }
+            
+           </code></pre>
+        </div>
+
+      </article>
+      <footer>
+        <h2 class="texto2" id="t2"><dd>Contacto</dd></h2>
+
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>

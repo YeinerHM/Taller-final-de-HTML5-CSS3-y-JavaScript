@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Talleres/CSS/index.css" />
+    <script src="/Talleres/JS/index.js"></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="accordion();">
+    <header>
+      <nav>
+        <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+        <a class="btn_menu" href="/Talleres/TMenu.html">Menu de Talleres</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      
+
+      <h1 id="t1">Talleres en Java - Realizar el taller #3 de PSeInt en Java</h1>
+      <article>
+        
+        <button class="accordion">Punto 1</button>
+        <div class="caja">
+          <h3>1-Realizar la siguiente figura por medio del ciclo Para</h3>
+          <img src="/Talleres/IMG/ejercicio1.jpg" alt="Ejercicio 1">
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete1;
+
+
+            public class Main {
+                public static void main(String[] args) {
+                    figura1();
+                }
+            
+                public static void figura1() {
+                    for (int i = 1; i <= 10; i++) {
+                        for (int j = 1; j <= i; j++) {
+                            System.out.print("*");
+                        }
+                        System.out.println("");
+                    }
+                }
+            }
+            
+            
+           </code></pre>
+        </div>
+
+
+        <button class="accordion">Punto 2</button>
+        <div class="caja">
+          <h3>2-Realizar la siguiente figura por medio del ciclo Mientras - Hacer</h3>
+          <img src="/Talleres/IMG/ejercicio2.jpg" alt="Ejercicio 2">
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete2;
+
+
+            public class Main {
+                public static void main(String[] args) {
+                    figura2();
+                }
+            
+                public static void figura2(){
+                    int i = 0;
+              int j;
+              int n = 10;
+              while (i!=10) {
+                i = i+1;
+                for (j=0;j<=(n-i-1);j++) {
+                  System.out.print(" ");
+                }
+                for (j=1;j<=i;j++) {
+                  System.out.print("*");
+                }
+                System.out.println("");
+              }
+                }
+            
+            
+            }
+            
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 3</button>
+        <div class="caja">
+          <h3>3-Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que</h3>
+          <img src="/Talleres/IMG/ejercicio3.jpg" alt="Ejercicio 3">
+          <p>Codigo Main:</p>
+           <pre><code>
+            package Paquete3;
+
+            public class Main {
+            
+                public static void main(String args[]) {
+                    figura3();
+                }
+                public static void figura3(){
+                    int a;
+              int b;
+              int c;
+              int i;
+              int n;
+              n = 12;
+              a = 23;
+              do {
+              n = n-1;
+              a = a-2;
+              for (b=1;b<=a;b++) {
+                System.out.print(" ");
+              }
+              for (c=a;c<=21;c++) {
+              System.out.print(" *");
+              }
+              System.out.println("");
+              } while (n!=1);
+              System.out.println("                    ***");
+              System.out.println("                    ***");
+              System.out.println("                   *****");
+              System.out.println("                  *******");
+            }
+            }
+            
+            
+            
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 4</button>
+        <div class="caja">
+          <h3>4-Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla del 5, entonces el resultado debería ser el siguiente:</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete4;
+
+            import Paquete.Tabla;
+            
+            
+            public class Main {
+                public static void main(String[] args) {
+                    Tabla punto = new Tabla();
+                    punto.Tabla();
+                }
+                
+                
+            }
+            
+           </code></pre>
+           <p>Codigo Tabla:</p>
+           <pre><code>
+
+            package Paquete;
+
+            import java.util.Scanner;
+            
+            
+            public class Tabla {
+                int numero;
+                private int multiplicar;
+                private int resultado=0;
+                private Scanner leer = new Scanner(System.in);
+                
+                public void Tabla(){
+                    LeerNumero();
+                    multiplicar = capturarDatoInt();
+                    MostrarTabla();
+            
+                }
+                
+                private void LeerNumero(){
+                    System.out.println("Por Favor indeque el numero de la tabla a generar ");
+                    
+                }
+                
+                private int capturarDatoInt(){
+                    return leer.nextInt();
+                }
+                
+                private void MostrarTabla(){
+                    System.out.println("Se genero la tabla del: "+multiplicar);
+                    for (numero=1;numero<=10;numero++) {
+                resultado = numero*multiplicar;
+                System.out.println(numero+" X "+multiplicar+" = "+resultado);
+              }
+                }
+            }
+            
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 5</button>
+        <div class="caja">
+          <h3>5-Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee terminar dicho ciclo.</h3>
+          <img src="/Talleres/IMG/ejercicio5.jpg" alt="Ejercicio 5">
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete5;
+
+            import Paquete.Menu;
+            
+            
+            public class Main {
+                public static void main(String[] args) {
+                    Menu m1 = new Menu();
+                    m1.Menu();
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo Menu:</p>
+           <pre><code>
+            package Paquete;
+
+            import java.util.Scanner;
+            
+            
+            public class Menu {
+                private int opcion;
+                private String nombre;
+                private Scanner leer = new Scanner(System.in);
+                
+                public void Menu(){
+                    do{
+                       MostrarMenu();
+                    opcion = capturarDatoInt();
+                    switch(opcion){
+                        case 1 -> {
+                            capturarDatoString();
+                            System.out.println("Ingrese su nombre");
+                            nombre = capturarDatoString();
+                        }
+                        case 2 -> {
+                            if(nombre==null){
+                                System.out.println("====================Ingrese un nombre primero====================");
+                            }else{
+                                System.out.println("====================Hola "+nombre+" que tal====================");
+                            }
+                        }
+                        case 3 -> {System.out.println("Cerrando Sistema");
+                        }
+                        default -> {System.out.println("La opcion Elegida no existe");
+                        }
+                    } 
+                    }while(opcion!=3);
+                }
+                
+                private void MostrarMenu(){
+                    System.out.println("Menu de usuario");
+                    System.out.println("1-Capturar nombre");
+                    System.out.println("2-Saludar persona");
+                    System.out.println("3-Salir del sistema");
+                    
+                }
+                
+                private int capturarDatoInt(){
+                    return leer.nextInt();
+                }
+                private String capturarDatoString(){
+                    return leer.nextLine();
+                }
+                
+            }
+            
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 6</button>
+        <div class="caja">
+          <h3>6-Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            package Paquete6;
+
+            import Paquete.AgendaTelefonica;
+            import java.util.ArrayList;
+            import java.util.Objects;
+            import java.util.Scanner;
+            
+            public class Main {
+                static Scanner leerString = new Scanner(System.in);
+                static Scanner leerInt = new Scanner(System.in);
+                static ArrayList<AgendaTelefonica> contactos = new ArrayList<>();
+                static String nombre;
+                static long telefono = 0;
+                static String organizacion;
+            
+                public static void main(String[] args) {
+                    menu();
+                }
+            
+                public static void menu() {
+            
+                    int opcion;
+            
+                    do {
+                        System.out.println("""
+                                |==========Menu=========|
+                                |1-Añadir contacto      |
+                                |2-Buscar contacto      |
+                                |3-Eliminar contactos   |              
+                                |4-Cerar Sistema        |
+                                |=======================|""");
+                        opcion = leerInt.nextInt();
+                        switch (opcion) {
+                            case 1 -> {
+                                if (contactos.size() == 3) {
+                                    System.out.println("|================================================|");
+                                    System.out.println("|No puede guardar contactos limite de 3 contactos|");
+                                    System.out.println("|================================================|\n");
+                                } else if (!contactos.isEmpty()) {
+                                    existeAgegar();
+                                } else {
+                                    System.out.println("|============ Añadir contacto =================|");
+                                    System.out.print("|Digite el nombre: ");
+                                    nombre = leerString.nextLine();
+                                    System.out.print("|Digite el Numero de telefono: ");
+                                    telefono = leerInt.nextLong();
+                                    System.out.print("|Digite organizacion: ");
+                                    organizacion = leerString.nextLine();
+                                    AgendaTelefonica contacto = new AgendaTelefonica(nombre, telefono, organizacion);
+                                    contactos.add(contacto);
+                                    System.out.println("|============Contacto guardado=================|\n");
+                                }
+                            }
+                            case 2 -> {
+                                if (!contactos.isEmpty()) {
+                                    System.out.println("|============ Buscar contacto =================|");
+                                    for (int i = 0; i < contactos.size(); i++) {
+                                        System.out.println("|"+(i + 1)+"-Nombre: "+contactos.get(i).getNombre()+" Telefono: "+contactos.get(i).getTelefono()+" Organizacion: "+contactos.get(i).getOrganizacion());
+                                        System.out.println("|==============================================|");
+                                    }
+                                } else {
+                                    System.out.println("|==============================================|");
+                                    System.out.println("|      La lista de contactos está vacia        |");
+                                    System.out.println("|==============================================|\n");
+                                }
+                            }
+                            case 3 -> {
+                                if (!contactos.isEmpty()) {
+                                    existeEliminar();
+                                }else{
+                                    System.out.println("|==============================================|");
+                                    System.out.println("|      La lista de contactos está vacia        |");
+                                    System.out.println("|==============================================|\n");
+                                }
+                            }
+                        }
+                    } while (opcion != 4);
+                }
+            
+                public static void existeAgegar() {
+                    boolean existe = false;
+                    System.out.println("|============ Añadir contacto =================|");
+                    System.out.print("|Digite el nombre: ");
+                    nombre = leerString.nextLine();
+                    for (int i = 0; i <= contactos.size() - 1; i++) {
+                        if (Objects.equals(contactos.get(i).getNombre(), nombre)) {
+                                    System.out.println("|==============================================|");
+                                    System.out.println("|        Este contacto ya esta guardado        |");
+                                    System.out.println("|==============================================|\n");
+                            existe = true;
+                            break;
+                        } else {
+                            existe = false;
+                        }
+                    }
+                    if (!existe) {
+                        System.out.print("|Digite el Numero de telefono: ");
+                        telefono = leerInt.nextLong();
+                        for (int i = 0; i <= contactos.size() - 1; i++) {
+                            if (contactos.get(i).getTelefono() == telefono) {
+                                    System.out.println("|==============================================|");
+                                    System.out.println("|        Este telefono ya esta guardado        |");
+                                    System.out.println("|==============================================|\n");
+                                existe = true;
+                                break;
+                            } else {
+                                existe = false;
+                            }
+                        }
+                    }
+                    if (!existe) {
+                        System.out.print("|Digite organizacion: ");
+                        organizacion = leerString.nextLine();
+                        AgendaTelefonica contacto = new AgendaTelefonica(nombre, telefono, organizacion);
+                        contactos.add(contacto);
+                        System.out.println("|============Contacto guardado=================|\n");
+                    }
+                }
+            
+                public static void existeEliminar() {
+                    System.out.println("|============ Eleminar contacto =================|");
+                    System.out.print("|Digite el nombre de contacto a eliminar: ");
+                    nombre = leerString.nextLine();
+                    for (int i = 0; i <= contactos.size() - 1; i++) {
+                        if (Objects.equals(contactos.get(i).getNombre(), nombre)) {
+                            int indice = i;
+                            System.out.println("Contacto nombre: "+contactos.get(i).getNombre()+" Telefono: " + contactos.get(i).getTelefono()+" Organizacion: "+contactos.get(i).getOrganizacion());
+                            contactos.remove(indice);
+                            System.out.println("|============Contacto eliminado=================|\n");
+                            break;
+                        }else{
+                            System.out.println("|==============================================|");
+                            System.out.println("|             Este Contacto no existe          |");
+                            System.out.println("|==============================================|\n");
+                            break;
+                        }
+                    }
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo AgendaTelefonica:</p>
+           <pre><code>
+            package Paquete;
+
+            public class AgendaTelefonica {
+                private String nombre;
+                private Long telefono;
+                private String organizacion;
+            
+                public AgendaTelefonica(String nombre, Long telefono, String organizacion) {
+                    this.nombre = nombre;
+                    this.telefono = telefono;
+                    this.organizacion = organizacion;
+                }
+            
+                public String getNombre() {
+                    return nombre;
+                }
+            
+                public void setNombre(String nombre) {
+                    this.nombre = nombre;
+                }
+            
+                public Long getTelefono() {
+                    return telefono;
+                }
+            
+                public void setTelefono(Long telefono) {
+                    this.telefono = telefono;
+                }
+            
+                public String getOrganizacion() {
+                    return organizacion;
+                }
+            
+                public void setOrganizacion(String organizacion) {
+                    this.organizacion = organizacion;
+                }
+            }
+            
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 7</button>
+        <div class="caja">
+          <h3>7-El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            package Pquete7;
+
+            import Paquete.Vehiculo;
+            import java.util.ArrayList;
+            import java.util.Objects;
+            import java.util.Scanner;
+            
+            public class Main {
+                static Scanner leerString = new Scanner(System.in);
+                static Scanner leerInt = new Scanner(System.in);
+                static String placa;
+                static String marca;
+                static String cliente;
+                static long telefono;
+                static ArrayList<Vehiculo> parqueadero = new ArrayList<>();
+            
+                public static void main(String[] args) {
+                    int opcion;
+            
+                    do {System.out.println("""
+                                |=========Menu=======|          
+                                |1-Ingresar vehiculo |
+                                |2-Buscar vehiculo   |
+                                |3-Salida de vehiculo|       
+                                |4-Cerrar Sistema    |
+                                |====================|""");
+                        opcion = leerInt.nextInt();
+                        switch (opcion) {case 1 -> {ingresar();}case 2 -> {buscar();}case 3 -> {salir();}}
+                    } while (opcion != 4);
+                }
+            
+                public static void ingresar() {
+                    boolean existe = false;
+                    if (parqueadero.size() >= 5) {
+                        System.out.println("|=======================================|");
+                        System.out.println("|Parqueadero lleno maximo de 5 vehiculos|");
+                        System.out.println("|=======================================|");
+                    } else if (!parqueadero.isEmpty()) {
+                        System.out.println("|============Ingresar vehiculo==========|");
+                        System.out.print("Placa: ");
+                        placa = leerString.nextLine();
+                        for (int i = 0; i < parqueadero.size() - 1; i++) {
+                            if (Objects.equals(parqueadero.get(i).getPlaca(), placa)) {
+                                System.out.println("Este Vehiculo se encuentra guardado en el parqueadero: " + i);
+                                existe = true;
+                                break;
+                            }
+                        }
+                        if (!existe) {
+                            System.out.print("Placa: ");
+                            marca = leerString.nextLine();
+                            System.out.print("Nombre del cliente: ");
+                            cliente = leerString.nextLine();
+                            System.out.print("Telefono: ");
+                            telefono = leerInt.nextLong();
+                            Vehiculo vehiculo = new Vehiculo(placa, marca, cliente, telefono);
+                            parqueadero.add(vehiculo);
+                        }
+                    } else {
+                        System.out.print("Placa: ");
+                        placa = leerString.nextLine();
+                        System.out.print("Marca: ");
+                        marca = leerString.nextLine();
+                        System.out.print("Nombre del cliente: ");
+                        cliente = leerString.nextLine();
+                        System.out.print("Telefono: ");
+                        telefono = leerInt.nextLong();
+                        Vehiculo vehiculo = new Vehiculo(placa, marca, cliente, telefono);
+                        parqueadero.add(vehiculo);
+                        System.out.println("|==============================|");
+                        System.out.println("|       Vehiculo guardado      |");
+                        System.out.println("|==============================|");
+                    }
+                }
+            
+                public static void salir() {
+                    boolean existe = false;
+                    if (!parqueadero.isEmpty()) {
+                        System.out.println("=============Salida de vehiculo==========");
+                        System.out.print("Digite la placa del Vehiculo para salida: ");
+                        placa = leerString.nextLine();
+                        for (int i = 0; i <= parqueadero.size() - 1; i++) {
+                            if (Objects.equals(parqueadero.get(i).getPlaca(), placa)) {
+                                System.out.println("Puesto del Parqueadero: " + (i+1));
+                                parqueadero.remove(i);
+                                System.out.println("============Veiculo retirado============");
+                                existe = true;
+                                break;
+                            }
+                        }
+                        if (!existe) {
+                            System.out.println("|========================================================|");
+                            System.out.println("|Este Vehiculo no se encuentra guardado en el parqueadero|");
+                            System.out.println("|========================================================|");
+                        }
+                    } else {
+                        System.out.println("|==================================|");
+                        System.out.println("|No hay vehiculos en el parqueadero|");
+                        System.out.println("|==================================|");
+                    }
+                }
+                public static void buscar(){
+                    boolean existe = false;
+                    if (!parqueadero.isEmpty()) {
+                        System.out.println("================Buscar vehiculo=================");
+                        System.out.print("Ingrese la placa del vehiculo: ");
+                        placa = leerString.nextLine();
+                        for (int i = 0; i <= (parqueadero.size() - 1); i++) {
+                            if (Objects.equals(parqueadero.get(i).getPlaca(), placa)) {
+                                System.out.println("Este Vehiculo se encuentra guardado en el parqueadero: "+
+                                        (i+1)+"\nPlaca: " + parqueadero.get(i).getPlaca()+" Marca: "+parqueadero.get(i).getMarca()+
+                                        " Propietario: "+parqueadero.get(i).getCliente()+" Telefono: "+parqueadero.get(i).getTelefono()+
+                                        "=====================================================\n");
+                                existe = true;
+                                break;
+                            }
+                        }
+                        if (!existe) {
+                            System.out.println("|========================================================|");
+                            System.out.println("|Este Vehiculo no se encuentra guardado en el parqueadero|");
+                            System.out.println("|========================================================|");
+                        }
+                    } else {
+                        System.out.println("|==================================|");
+                        System.out.println("|No hay vehiculos en el parqueadero|");
+                        System.out.println("|==================================|");
+                    }
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo Vehiculo:</p>
+           <pre><code>
+            package Paquete;
+
+            public class Vehiculo {
+                private String placa;
+                private String marca;
+                private String cliente;
+                private long telefono;
+            
+                public Vehiculo(String placa, String marca, String cliente, long telefono) {
+                    this.placa = placa;
+                    this.marca = marca;
+                    this.cliente = cliente;
+                    this.telefono = telefono;
+                }
+            
+                public String getPlaca() {
+                    return placa;
+                }
+            
+                public void setPlaca(String placa) {
+                    this.placa = placa;
+                }
+            
+                public String getMarca() {
+                    return marca;
+                }
+            
+                public void setMarca(String marca) {
+                    this.marca = marca;
+                }
+            
+                public String getCliente() {
+                    return cliente;
+                }
+            
+                public void setCliente(String cliente) {
+                    this.cliente = cliente;
+                }
+            
+                public long getTelefono() {
+                    return telefono;
+                }
+            
+                public void setTelefono(long telefono) {
+                    this.telefono = telefono;
+                }
+            
+                
+            }
+            
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 8</button>
+        <div class="caja">
+          <h3>8-La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            package Paquete8;
+
+            import Paquete.Cliente;
+            import java.util.ArrayList;
+            import java.util.Objects;
+            import java.util.Scanner;
+            
+            public class Main {
+                static Scanner leerString = new Scanner(System.in);
+                static Scanner leerInt = new Scanner(System.in);
+                static ArrayList<Cliente> cliente = new ArrayList<>();
+                static String nombre;
+                static boolean examen;
+                static int indice;
+            
+                public static void main(String[] args) {
+                    int opcion;
+                    do {
+                        System.out.println("""              
+                                |===========El Maestro===========|                
+                                |1-Ingresar estudiante           |
+                                |2-Buscar estudiante             |                  
+                                |3-Salir                         |
+                                |================================|""");
+                        opcion = leerInt.nextInt();
+                        switch (opcion){
+                            case 1 -> {
+                                System.out.println("=============Ingresar estudiante============");
+                                registrar();
+                                System.out.println("============================================");
+                            }
+                            case 2 -> {
+                                System.out.println("=============Buscar estudiante============");
+                                if(buscar()){
+                                    System.out.println("El estudiante: "+cliente.get(indice).getNombre());
+                                    if (cliente.get(indice).isExamen()){
+                                        System.out.println("Finalizo el curso y lo aprobo");
+                                    }else{
+                                        System.out.println("Finalizo el curso y  NO aprobo");
+                                    }
+                                }else{
+                                    System.out.println("|=============================|");
+                                    System.out.println("|No hay estudiantes registados|");
+                                    System.out.println("|=============================|");
+                                }
+                                System.out.println("============================================");
+                            }
+                            case 3 -> {
+                                System.out.println("|=============================|");
+                                System.out.println("|       Cerrando Sistema      |");
+                                System.out.println("|=============================|");
+                            }
+                            default -> {
+                                    System.out.println("|=============================|");
+                                    System.out.println("|      Opcion no existe       |");
+                                    System.out.println("|=============================|");
+                                    }
+                        }
+                    } while (opcion != 3);
+                }
+            
+                public static void registrar() {
+                    if (!cliente.isEmpty()) {
+                        if (cliente.size() == 8) {
+                            System.out.println("|==============================|");
+                            System.out.println("|Escuela al maximo de 8 alumnos|");
+                            System.out.println("|==============================|");
+                        } else if (!buscar()) {
+                            System.out.print("Ingrese la nota del 1 al 5: ");
+                            int nota = leerInt.nextInt();
+                            if(nota>=3){
+                                examen = true;
+                            }else{
+                                examen = false;
+                            }
+                            Cliente estudiante = new Cliente(nombre, examen);
+                            cliente.add(estudiante);
+                        }else {
+                            System.out.println("|====================|");
+                            System.out.println("| Ya esta registrado |");
+                            System.out.println("|====================|");
+                        }
+            
+                    } else {
+                        System.out.print("Nombre del estudiante: ");
+                        nombre = leerString.nextLine();
+                        System.out.print("Ingrese la nota del 1 al 5: ");
+                        int nota = leerInt.nextInt();
+                            if(nota>=3){
+                                examen = true;
+                            }else{
+                                examen = false;
+                            }
+                        Cliente estudiante = new Cliente(nombre, examen);
+                        cliente.add(estudiante);
+                    }
+                }
+            
+                public static boolean buscar() {
+                    boolean existe = false;
+                    if(!cliente.isEmpty()){
+                        System.out.print("Nombre del estudiante: ");
+                        nombre = leerString.nextLine();
+                        for (int i = 0; i <= cliente.size() - 1; i++) {
+                            if (Objects.equals(cliente.get(i).getNombre(), nombre)) {
+                                existe = true;
+                                indice = i;
+                                break;
+                            }
+                        }
+                    }
+            
+                    return existe;
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo Cliente:</p>
+           <pre><code>
+            package Paquete;
+
+            public class Cliente {
+                private String nombre;
+                private boolean examen;
+            
+                public Cliente(String nombre, boolean examen) {
+                    this.nombre = nombre;
+                    this.examen = examen;
+                }
+            
+                public String getNombre() {
+                    return nombre;
+                }
+            
+                public void setNombre(String nombre) {
+                    this.nombre = nombre;
+                }
+            
+                public boolean isExamen() {
+                    return examen;
+                }
+            
+                public void setExamen(boolean examen) {
+                    this.examen = examen;
+                }
+            
+                
+            }
+            
+           </code></pre>
+        </div>
+
+      </article>
+      <footer>
+        <h2 class="texto2" id="t2"><dd>Contacto</dd></h2>
+
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>

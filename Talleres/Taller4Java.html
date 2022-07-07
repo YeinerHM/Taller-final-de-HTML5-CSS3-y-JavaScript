@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Talleres/CSS/index.css" />
+    <script src="/Talleres/JS/index.js"></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="accordion();">
+    <header>
+      <nav>
+        <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+        <a class="btn_menu" href="/Talleres/TMenu.html">Menu de Talleres</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      
+
+      <h1 id="t1">Talleres en Java - Realizar el taller #4 de PSeInt en Java</h1>
+      
+      <article>
+        
+        <button class="accordion" >Punto 1</button>
+        <div class="caja">
+          <h3>1-Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</h3>
+          <img src="/Talleres/IMG/arreglos1.jpg" alt="arreglos1">
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete1;
+
+            import Paquete.Vector;
+            
+            
+            public class Main {
+                public static void main(String[] args) {
+                    Vector v1 = new Vector();
+                    v1.Vector();
+                }
+                
+            }
+            
+           </code></pre>
+           <p>Codigo Vector:</p>
+           <pre><code>
+
+            package Paquete;
+
+            import java.util.Scanner;
+            
+            
+            public class Vector {
+                private int[] dato = new int[5];
+                private Scanner leer = new Scanner(System.in);
+                
+                public void Vector(){
+                    for(int i = 0; i < dato.length; i++){
+                    LeerNumero(i);        
+                    dato[i] = capturarDatoInt();
+                    }
+                    for(int j = 0; j < dato.length; j++){
+                    MostrarDato(j);
+                    }
+                   
+            
+                }
+                
+                private void LeerNumero(int i){
+                    System.out.println("Ingrese numero de la posicion "+(i+1));
+                    
+                }
+                
+                private int capturarDatoInt(){
+                    return leer.nextInt();
+                }
+                
+                private void MostrarDato(int j){
+                    System.out.println("["+j+"] = "+dato[j]);
+                    
+                }
+            }
+            
+            
+           </code></pre>
+        </div>
+
+
+        <button class="accordion" >Punto 2</button>
+        <div class="caja">
+          <h3>2-Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo</h3>
+          <img src="/Talleres/IMG/arreglos2.jpg" alt="arreglos2">
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete2;
+
+            import Paquete.Par_Impar;
+            
+            
+            public class Main {
+                public static void main(String[] args) {
+                    Par_Impar lista = new Par_Impar();
+                    lista.Par_Impar();
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo Par_Impar:</p>
+           <pre><code>
+
+            package Paquete;
+
+
+
+            public class Par_Impar {
+                private int[] matriz = new int[20];
+                
+                public void Par_Impar(){
+                    for (int i = 0; i < matriz.length; i++) {
+                        matriz[i] = (int) (Math.random() * (100 - 1 + 1) + 1);
+                    }
+                    System.out.print("Numeros pares: ");
+                    for(int j = 0; j < matriz.length; j++){
+                    MostrarPar(j);
+                    }
+                    System.out.println("");
+                    System.out.print("Numeros impares: ");
+                    for(int j = 0; j < matriz.length; j++){
+                    MostrarImpar(j);
+                    }
+                    System.out.println("");
+                }
+                
+                
+                private void MostrarPar(int j){
+                   if (matriz[j] % 2 == 0) {
+                            System.out.print(" "+matriz[j]);
+                        }
+                    
+                }
+                
+                private void MostrarImpar(int j){
+                    if (matriz[j] % 2 != 0) {
+                            System.out.print(" "+matriz[j]);
+                        }
+                }
+            }
+            
+            
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 3</button>
+        <div class="caja">
+          <h3>3-Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete3;
+
+            import Paquete.Nprimos;
+            
+            
+            public class Main {
+                public static void main(String[] args) {
+                    Nprimos lista = new Nprimos();
+                    lista.Nprimos();
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo Nprimos:</p>
+           <pre><code>
+            package Paquete;
+
+
+
+            public class Nprimos {
+                private int[] primos = new int[1000];
+                int cont=0;
+                int numPrimo = 0;
+                
+                public void Nprimos(){
+                    for (int i = 1; i<1000;i++) {
+                        cont = 0;
+                        for(int j = 1;j <= i;j++){
+                            if(i % j == 0){
+                                cont++;
+                            }
+                        }
+                        if(cont == 2){
+                            primos[i] = i;
+                            if(primos[i]==2){
+                                System.out.print(primos[i]);
+                                numPrimo++;
+                            }else{
+                                System.out.print(","+primos[i]);
+                                numPrimo++;
+                            }
+                            
+                        }
+                    }
+                    MostrarTotalPrimo();
+                }
+                
+                
+                
+                private void MostrarTotalPrimo(){
+                    System.out.println("\nNumeros primos: "+numPrimo);
+                }
+            }
+        </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 4</button>
+        <div class="caja">
+          <h3>4-Dada la siguiente matriz bidimensional, el cual debe de quemar en el código</h3>
+          <img src="/Talleres/IMG/arreglos4.jpg" alt="arreglos4">
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete4;
+
+            import Paquete.Matriz1;
+            import Paquete.Matriz2;
+            import java.util.Scanner;
+            
+            
+            
+            public class Main {
+                public static void main(String[] args) {
+                    Scanner leer = new Scanner(System.in);
+                    int opcion;
+                    do{
+                        System.out.println("Menu \n1-Abrir Matriz 1 \n2-Abrir Matriz 2 \n3-Salir");
+                        opcion = leer.nextInt();
+                    switch(opcion){
+                        case 1 -> {
+                            System.out.println("Matriz 1");
+                            Matriz1 lista = new Matriz1();
+                            lista.Matriz1();
+                        }
+                        case 2 -> {
+                            System.out.println("Matriz 2");
+                            Matriz2 lista2 = new Matriz2();
+                            lista2.Matriz2();
+                        }
+                        case 3 -> System.out.println("Cerrando Sistema");
+                    }
+                    }while(opcion!=3);
+                    
+                    
+                }
+            }
+            
+           </code></pre>
+
+           <p>Codigo Matriz1:</p>
+           <pre><code>
+            package Paquete;
+
+
+
+            public class Matriz1 {
+                static String[][] matriz = new String[4][5];
+                
+                public void Matriz1(){
+                    matriz[0][0] = "01";
+                    matriz[0][1] = "02";
+                    matriz[0][2] = "03";
+                    matriz[0][3] = "04";
+                    matriz[0][4] = "05";
+                    matriz[1][0] = "06";
+                    matriz[1][1] = "07";
+                    matriz[1][2] = "08";
+                    matriz[1][3] = "09";
+                    matriz[1][4] = "10";
+                    matriz[2][0] = "11";
+                    matriz[2][1] = "12";
+                    matriz[2][2] = "13";
+                    matriz[2][3] = "14";
+                    matriz[2][4] = "15";
+                    matriz[3][0] = "16";
+                    matriz[3][1] = "17";
+                    matriz[3][2] = "18";
+                    matriz[3][3] = "19";
+                    matriz[3][4] = "20";
+                    MostrarMatriz();
+                            
+                }
+                
+                
+                
+                private void MostrarMatriz(){
+                    for (int filas = 0; filas < 4; filas++) {
+                            for (int columnas = 0; columnas < 5; columnas++) {
+                                System.out.print(matriz[filas][columnas]+" ");
+                            }
+                        System.out.println("");
+                    }
+                }
+            }
+           </code></pre>
+            <h3>-Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.</h3>
+            <img src="/Talleres/IMG/arreglos4.1.jpg" alt="arreglos4-1">
+           <p>Codigo Matriz2:</p>
+           <pre><code>
+            package Paquete;
+
+
+
+            public class Matriz2 {
+                static int[][] matriz = new int[4][5];
+                
+                public void Matriz2(){
+                    int contador;
+                    int cont = 0;
+                    int columna = 0;
+                    int fila = 0;
+                   for (contador=0;contador<=4;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont;
+                  columna = columna+1;
+                }
+                fila = 1;
+                columna = 4;
+                cont = 5;
+                for (contador=4;contador>=0;contador--) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont;
+                  columna = columna-1;
+                }
+                fila = 2;
+                columna = 0;
+                cont = 10;
+                for (contador=0;contador<=4;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont;
+                  columna = columna+1;
+                }
+                fila = 3;
+                columna = 4;
+                cont = 15;
+                for (contador=4;contador>=0;contador--) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont;
+                  columna = columna-1;
+                }
+                            imprimir();
+              }
+            
+              public static void imprimir() {
+                            int fila;
+                            int columna;
+                for (fila=0;fila<=3;fila++) {
+                  for (columna=0;columna<=4;columna++) {
+                    if (matriz[fila][columna]<=9) {
+                      System.out.print("0"+matriz[fila][columna]+" ");
+                    } else {
+                      System.out.print(matriz[fila][columna]+" ");
+                    }
+                  }
+                  System.out.println("");
+                }
+              }
+                }
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 5</button>
+        <div class="caja">
+          <h3>5-Se debe de imprimir el siguiente cuadro</h3>
+          <img src="/Talleres/IMG/arreglos5.jpg" alt="arreglos5">
+          <h3>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            package Paquete5;
+
+            import Paquete.TablaM;
+            
+            
+            public class Main {
+                
+                public static void main(String[] args) {
+                    TablaM lista = new TablaM();
+                    lista.TablaM();
+                }
+            }
+            
+           </code></pre>
+           <p>Codigo Tabla:</p>
+           <pre><code>
+            package Paquete;
+
+            import java.util.Scanner;
+            
+            
+            public class TablaM {
+                static int[][] matriz = new int[10][10];
+                Scanner leer = new Scanner(System.in);
+            
+              public  void TablaM(){
+                    int contador;
+                    int cont = 0;
+                    int columna = 0;
+                    int fila = 0;
+                // Tabla del 1
+                for (contador=0;contador<=9;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont*1;
+                  columna = columna+1;
+                }
+                // tabla del 2
+                fila = 1;
+                columna = 0;
+                cont = 0;
+                for (contador=0;contador<=9;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont*2;
+                  columna = columna+1;
+                }
+                // tabla del 3
+                fila = 2;
+                columna = 0;
+                cont = 0;
+                for (contador=0;contador<=9;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont*3;
+                  columna = columna+1;
+                }
+                // tabla del 4
+                fila = 3;
+                columna = 0;
+                cont = 0;
+                for (contador=0;contador<=9;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont*4;
+                  columna = columna+1;
+                }
+                // tabla del 5
+                fila = 4;
+                columna = 0;
+                cont = 0;
+                for (contador=0;contador<=9;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont*5;
+                  columna = columna+1;
+                }
+                // tabla del 6
+                fila = 5;
+                columna = 0;
+                cont = 0;
+                for (contador=0;contador<=9;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont*6;
+                  columna = columna+1;
+                }
+                // tabla del 7
+                fila = 6;
+                columna = 0;
+                cont = 0;
+                for (contador=0;contador<=9;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont*7;
+                  columna = columna+1;
+                }
+                // tabla del 8
+                fila = 7;
+                columna = 0;
+                cont = 0;
+                for (contador=0;contador<=9;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont*8;
+                  columna = columna+1;
+                }
+                // tabla del 9
+                fila = 8;
+                columna = 0;
+                cont = 0;
+                for (contador=0;contador<=9;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont*9;
+                  columna = columna+1;
+                }
+                // tabla del 10
+                fila = 9;
+                columna = 0;
+                cont = 0;
+                for (contador=0;contador<=9;contador++) {
+                  cont = cont+1;
+                  matriz[fila][columna] = cont*10;
+                  columna = columna+1;
+                }
+                    int opcion;
+                            do{
+                    System.out.println("        |___________________________________COLUMNAS____________________________________|");
+              System.out.println("        |___0___|___1___|___2___|___3___|___4___|___5___|___6___|___7___|___8___|___9___|");
+              System.out.println("|   |_0_|__1X1__|__2X1__|__3X1__|__4X1__|__5X1__|__6X1__|__7X1__|__8X1__|__9X1__|_10X1__|");
+              System.out.println("|   |_1_|__1X2__|__2X2__|__3X2__|__4X2__|__5X2__|__6X2__|__7X2__|__8X2__|__9X2__|_10X2__|");
+              System.out.println("| F |_2_|__1X3__|__2X3__|__3X3__|__4X3__|__5X3__|__6X3__|__7X3__|__8X3__|__9X3__|_10X3__|");
+              System.out.println("| I |_3_|__1X4__|__2X4__|__3X4__|__4X4__|__5X4__|__6X4__|__7X4__|__8X4__|__9X4__|_10X4__|");
+              System.out.println("| L |_4_|__1X5__|__2X5__|__3X5__|__4X5__|__5X5__|__6X5__|__7X5__|__8X5__|__9X5__|_10X5__|");
+              System.out.println("| A |_5_|__1X6__|__2X6__|__3X6__|__4X6__|__5X6__|__6X6__|__7X6__|__8X6__|__9X6__|_10X6__|");
+              System.out.println("| S |_6_|__1X7__|__2X7__|__3X7__|__4X7__|__5X7__|__6X7__|__7X7__|__8X7__|__9X7__|_10X7__|");
+              System.out.println("|   |_7_|__1X8__|__2X8__|__3X8__|__4X8__|__5X8__|__6X8__|__7X8__|__8X8__|__9X8__|_10X8__|");
+              System.out.println("|   |_8_|__1X9__|__2X9__|__3X9__|__4X9__|__5X9__|__6X9__|__7X9__|__8X9__|__9X9__|_10X9__|");
+              System.out.println("|   |_9_|__1X10_|__2X10_|__3X10_|__4X10_|__5X10_|__6X10_|__7X10_|__8X10_|__9X10_|_10X10_|");
+              System.out.println("");
+              System.out.println("Por favor insertar la fila y columna de la cual desea ver el resultado");
+                            System.out.print("Ingrese Fila: ");
+                            fila=leer.nextInt();
+                            System.out.print("Ingrese Columna: ");
+                            columna=leer.nextInt();
+                            imprimir(fila,columna);
+                            System.out.println("1 para Volver Ó  2 para Salir");
+                            opcion = leer.nextInt();
+                            }while(opcion!=2);
+                    
+                            
+              }
+                    public static void imprimir(int fila,int columna) {
+                          System.out.println("["+fila+","+columna+"]"+"El resultado es: "+matriz[fila][columna]);
+              }
+            }
+           </code></pre>
+        </div>
+
+      </article>
+      <footer>
+        <h2 class="texto2" id="t2"><dd>Contacto</dd></h2>
+
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>

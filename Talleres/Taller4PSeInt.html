@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Talleres/CSS/index.css" />
+    <script src="/Talleres/JS/index.js"></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="accordion();">
+    <header>
+      <nav>
+        <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+        <a class="btn_menu" href="/Talleres/TMenu.html">Menu de Talleres</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      
+
+      <h1 id="t1">Talleres en PSeInt - Taller de Arreglos</h1>
+      <article>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/y6kmTvieWII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button class="accordion">Punto 1</button>
+        <div class="caja">
+          <h3>1-Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor de la siguiente manera:</h3>
+          <img src="/Talleres/IMG/arreglos1.jpg" alt="arreglos1">
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_04_1
+            Definir contador Como Entero;
+            Definir matriz Como Entero;
+            Dimension matriz[5];
+            
+            //Leer numeros
+            Para contador <- 0 Hasta 4 Con Paso 1 Hacer
+              contador <- contador+1;//numero de pregunta
+              Escribir "Ingrese un numero ",contador;
+              contador <- contador-1;//numero de posicion para asiganar
+              Leer matriz[contador];
+            FinPara
+            
+            Limpiar Pantalla;
+            Escribir "Lista de numeros:";
+            
+            //mostrar numeros
+            Para contador <- 0 Hasta 4 Con Paso 1 Hacer
+              Escribir "[",contador,"]"," = ",matriz[contador];
+            FinPara
+            
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+
+        <button class="accordion">Punto 2</button>
+        <div class="caja">
+          <h3>2-Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo</h3>
+          <img src="/Talleres/IMG/arreglos2.jpg" alt="arreglos2">
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_04_2
+            Definir contador,pares,impares Como Entero;
+            Definir matriz,mpares,mimpares Como Entero;
+            Dimension matriz[20];
+            Dimension mpares[20];
+            Dimension mimpares[20];
+            pares<-0;
+            impares<-0;
+            
+            
+            Para contador <- 0 Hasta 19 Con Paso 1 Hacer
+              
+              Repetir
+                
+                contador <- contador+1;
+                Escribir "Escoja 20 numeros entre 1 y 100 Ingrese el numero: ",contador;
+                contador <- contador-1;
+                Leer matriz[contador];
+                
+                
+              Hasta Que matriz[contador] <= 100 y matriz[contador] >= 1
+              
+            FinPara
+            
+            Limpiar Pantalla;
+            
+            contador <- 0;
+            
+            Mientras contador <= 19 Hacer
+              
+              Si matriz[contador]%2 = 0 Entonces
+                mpares[pares] <- matriz[contador];
+                
+                pares <- pares+1;
+              SiNo
+                mimpares[impares] <- matriz[contador];
+                
+                impares <- impares+1;
+              FinSi
+              
+              contador <- contador+1;
+            FinMientras
+            
+            Escribir "Números pares: " Sin Saltar;
+            contador <- 0;
+            
+            Mientras contador < pares Hacer
+              Si contador = 0 Entonces
+                Escribir mpares[contador]Sin Saltar ;
+                contador <- contador+1;
+              FinSi
+              Escribir ",",mpares[contador]Sin Saltar ;
+              contador <- contador+1;
+            FinMientras
+            
+            Escribir " ";
+            
+            Escribir "Números impares: " Sin Saltar;
+            contador <- 0;
+            
+            Mientras contador < impares Hacer
+              Si contador = 0 Entonces
+                Escribir mimpares[contador]Sin Saltar ;
+                contador <- contador+1;
+              FinSi
+              Escribir ",",mimpares[contador]Sin Saltar ;
+              contador <- contador+1;
+            FinMientras
+            Escribir "";
+            
+          FinProceso          
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 3</button>
+        <div class="caja">
+          <h3>3-Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_04_3
+            Definir contador,cont,i,n Como Entero;
+            Definir matriz Como Entero;
+            Dimension matriz[1000];
+            
+            Para contador <- 0 Hasta 999 Con Paso 1 Hacer
+              
+              
+              matriz[contador] <- contador+1;
+              
+            FinPara
+            
+            Limpiar Pantalla;
+            Escribir "Lista de numeros primos: " Sin Saltar;
+            
+            
+            Para contador <- 0 Hasta 999 Con Paso 1 Hacer
+              n<-matriz[contador];
+              cont <- 0;
+              Para i <- 1 Hasta n Con Paso 1 Hacer
+                Si n%i=0 Entonces
+                  cont<-cont+1;
+                FinSi
+              FinPara
+              
+              Si cont=2 Entonces 
+                Si n = 997 Entonces
+                  Escribir n;
+                SiNo
+                  Escribir n,",",Sin Saltar;
+                FinSi
+                
+              FinSi 
+            FinPara
+            
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 4</button>
+        <div class="caja">
+          <h3>4-Dada la siguiente matriz bidimensional, el cual debe de quemar en el código</h3>
+          <img src="/Talleres/IMG/arreglos4.jpg" alt="arreglos4">
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_04_4
+            Definir fila,columna Como Entero;
+            Definir matriz Como Caracter;
+            Dimension matriz[4,5];
+            
+            matriz[0,0] <- "01";
+            matriz[0,1] <- "02";
+            matriz[0,2] <- "03";
+            matriz[0,3] <- "04";
+            matriz[0,4] <- "05";
+            matriz[1,0] <- "06";
+            matriz[1,1] <- "07";
+            matriz[1,2] <- "08";
+            matriz[1,3] <- "09";
+            matriz[1,4] <- "10";
+            matriz[2,0] <- "11";
+            matriz[2,1] <- "12";
+            matriz[2,2] <- "13";
+            matriz[2,3] <- "14";
+            matriz[2,4] <- "15";
+            matriz[3,0] <- "16";
+            matriz[3,1] <- "17";
+            matriz[3,2] <- "18";
+            matriz[3,3] <- "19";
+            matriz[3,4] <- "20";
+            
+            Para fila <- 0 Hasta 3 Con Paso 1 Hacer
+              Para columna <- 0 Hasta 4 Con Paso 1 Hacer
+                Escribir matriz[fila,columna]," "Sin Saltar;
+              FinPara
+              Escribir "";
+            FinPara
+            
+          FinProceso
+          
+           </code></pre>
+           <h3>-Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.</h3>
+          <img src="/Talleres/IMG/arreglos4.1.jpg" alt="arreglos4-1">
+          <p>Codigo:</p>
+        <pre><code>
+  Proceso Taller_04_4
+	Definir fila,columna,contador,cont Como Entero;
+	Definir matriz Como Entero;
+	Dimension matriz[4,5];
+	contador <- 0;
+	
+	fila <- 0 ;
+	columna <- 0;
+	cont <- 0;
+	Para contador <- 0 Hasta 4 Con Paso 1 Hacer
+		
+		cont <- cont+1;
+		matriz[fila,columna] <- cont;
+		columna <- columna+1;
+		
+	FinPara
+	
+	fila <- 1 ;
+	columna <- 4;
+	cont <- 5;
+	Para contador <- 4 Hasta 0 Con Paso -1 Hacer
+		
+		cont <- cont+1;
+		matriz[fila,columna] <- cont;
+		columna <- columna-1;
+		
+	FinPara
+	
+	fila <- 2 ;
+	columna <- 0;
+	cont <- 10;
+	Para contador <- 0 Hasta 4 Con Paso 1 Hacer
+		
+		cont <- cont+1;
+		matriz[fila,columna] <- cont;
+		columna <- columna+1;
+		
+	FinPara
+	
+	fila <- 3 ;
+	columna <- 4;
+	cont <- 15;
+	Para contador <- 4 Hasta 0 Con Paso -1 Hacer
+		
+		cont <- cont+1;
+		matriz[fila,columna] <- cont;
+		columna <- columna-1;
+		
+	FinPara
+
+	
+	
+	Para fila <- 0 Hasta 3 Con Paso 1 Hacer
+		Para columna <- 0 Hasta 4 Con Paso 1 Hacer
+			si matriz[fila,columna] <= 9 Entonces
+				Escribir "0",matriz[fila,columna]," "Sin Saltar;
+			SiNo
+				Escribir matriz[fila,columna]," "Sin Saltar;
+			FinSi
+			
+		FinPara
+		Escribir "";
+	FinPara
+	
+  FinProceso
+
+        </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 5</button>
+        <div class="caja">
+          <h3>5-Se debe de imprimir el siguiente cuadro</h3>
+          <img src="/Talleres/IMG/arreglos5.jpg" alt="arreglos5">
+          <h3>El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y columna insertada por el usuario.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_04_5
+            Definir fila,columna,contador,cont,opcion Como Entero;
+            Definir matriz Como Entero;;
+            Dimension matriz[10,10];
+            contador <- 0;
+            //Tabla del 1
+            fila <- 0 ;
+            columna <- 0;
+            cont <- 0;
+            Para contador <- 0 Hasta 9 Con Paso 1 Hacer
+              
+              cont <- cont+1;
+              matriz[fila,columna] <- cont*1;
+              columna <- columna+1;
+              
+            FinPara
+            //tabla del 2
+            fila <- 1 ;
+            columna <- 0;
+            cont <- 0;
+            Para contador <- 0 Hasta 9 Con Paso 1 Hacer
+              
+              cont <- cont+1;
+              matriz[fila,columna] <- cont*2;
+              columna <- columna+1;
+              
+            FinPara
+            //tabla del 3
+            fila <- 2 ;
+            columna <- 0;
+            cont <- 0;
+            Para contador <- 0 Hasta 9 Con Paso 1 Hacer
+              
+              cont <- cont+1;
+              matriz[fila,columna] <- cont*3;
+              columna <- columna+1;
+              
+            FinPara
+            //tabla del 4
+            fila <- 3 ;
+            columna <- 0;
+            cont <- 0;
+            Para contador <- 0 Hasta 9 Con Paso 1 Hacer
+              
+              cont <- cont+1;
+              matriz[fila,columna] <- cont*4;
+              columna <- columna+1;
+              
+            FinPara
+            //tabla del 5
+            fila <- 4 ;
+            columna <- 0;
+            cont <- 0;
+            Para contador <- 0 Hasta 9 Con Paso 1 Hacer
+              
+              cont <- cont+1;
+              matriz[fila,columna] <- cont*5;
+              columna <- columna+1;
+              
+            FinPara
+            //tabla del 6
+            fila <- 5 ;
+            columna <- 0;
+            cont <- 0;
+            Para contador <- 0 Hasta 9 Con Paso 1 Hacer
+              
+              cont <- cont+1;
+              matriz[fila,columna] <- cont*6;
+              columna <- columna+1;
+              
+            FinPara
+            //tabla del 7
+            fila <- 6 ;
+            columna <- 0;
+            cont <- 0;
+            Para contador <- 0 Hasta 9 Con Paso 1 Hacer
+              
+              cont <- cont+1;
+              matriz[fila,columna] <- cont*7;
+              columna <- columna+1;
+              
+            FinPara
+            //tabla del 8
+            fila <- 7 ;
+            columna <- 0;
+            cont <- 0;
+            Para contador <- 0 Hasta 9 Con Paso 1 Hacer
+              
+              cont <- cont+1;
+              matriz[fila,columna] <- cont*8;
+              columna <- columna+1;
+              
+            FinPara
+            //tabla del 9
+            fila <- 8 ;
+            columna <- 0;
+            cont <- 0;
+            Para contador <- 0 Hasta 9 Con Paso 1 Hacer
+              
+              cont <- cont+1;
+              matriz[fila,columna] <- cont*9;
+              columna <- columna+1;
+              
+            FinPara
+            //tabla del 10
+            fila <- 9 ;
+            columna <- 0;
+            cont <- 0;
+            Para contador <- 0 Hasta 9 Con Paso 1 Hacer
+              
+              cont <- cont+1;
+              matriz[fila,columna] <- cont*10;
+              columna <- columna+1;
+              
+            FinPara
+            
+            Repetir
+              Escribir "        |___________________________________COLUMNAS____________________________________|";
+              Escribir "        |___0___|___1___|___2___|___3___|___4___|___5___|___6___|___7___|___8___|___9___|";
+              Escribir "|   |_0_|__1X1__|__2X1__|__3X1__|__4X1__|__5X1__|__6X1__|__7X1__|__8X1__|__9X1__|_10X1__|";
+              Escribir "|   |_1_|__1X2__|__2X2__|__3X2__|__4X2__|__5X2__|__6X2__|__7X2__|__8X2__|__9X2__|_10X2__|";
+              Escribir "| F |_2_|__1X3__|__2X3__|__3X3__|__4X3__|__5X3__|__6X3__|__7X3__|__8X3__|__9X3__|_10X3__|";
+              Escribir "| I |_3_|__1X4__|__2X4__|__3X4__|__4X4__|__5X4__|__6X4__|__7X4__|__8X4__|__9X4__|_10X4__|";
+              Escribir "| L |_4_|__1X5__|__2X5__|__3X5__|__4X5__|__5X5__|__6X5__|__7X5__|__8X5__|__9X5__|_10X5__|";
+              Escribir "| A |_5_|__1X6__|__2X6__|__3X6__|__4X6__|__5X6__|__6X6__|__7X6__|__8X6__|__9X6__|_10X6__|";
+              Escribir "| S |_6_|__1X7__|__2X7__|__3X7__|__4X7__|__5X7__|__6X7__|__7X7__|__8X7__|__9X7__|_10X7__|";
+              Escribir "|   |_7_|__1X8__|__2X8__|__3X8__|__4X8__|__5X8__|__6X8__|__7X8__|__8X8__|__9X8__|_10X8__|";
+              Escribir "|   |_8_|__1X9__|__2X9__|__3X9__|__4X9__|__5X9__|__6X9__|__7X9__|__8X9__|__9X9__|_10X9__|";
+              Escribir "|   |_9_|__1X10_|__2X10_|__3X10_|__4X10_|__5X10_|__6X10_|__7X10_|__8X10_|__9X10_|_10X10_|";
+              Escribir "";
+              Escribir "Por favor insertar la fila y columna de la cual desea ver el resultado";
+              
+              Repetir
+                Escribir "Ingrese Fila: "Sin Saltar;
+                Leer fila;
+              Hasta Que fila > -1 Y fila < 10 
+              Repetir
+                Escribir "Ingrese Columna: "Sin Saltar;
+                Leer columna;
+              Hasta Que columna > -1 Y columna < 10
+              
+              Escribir "";
+              Escribir"[",fila,",",columna,"] El resultado es: ", matriz[fila,columna];
+              Escribir "";
+              Escribir "";
+              Escribir "Enter para Volver a escoger y 4 para salir "Sin Saltar;
+              Leer opcion;
+              
+              Limpiar Pantalla;
+              
+              si opcion = 4 Entonces
+                Escribir "Sistema Cerrado";
+              FinSi
+            Hasta Que opcion=4
+            
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+      </article>
+      <footer>
+        <h2 class="texto2" id="t2"><dd>Contacto</dd></h2>
+
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+/*1- Los botones que use para navegación deberán tener su propio estilo, 
+tanto al pasar el puntero por encima, como al hacer clic.*/
+.btn {
+  background-color: rgb(37, 48, 98);
+  color: rgb(255, 255, 255);
+  width: 0px;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  margin: 0px;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.btn_descarga {
+  background-color: #fff7d6;
+  color: black;
+  width: 0px;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  margin: 0px;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.btn_menu {
+  box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffc477 5%, #ff530f 100%);
+	background-color:#ffc477;
+	border-radius:6px;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+}
+
+.btn_menu:hover {
+	background:linear-gradient(to bottom, #ff530f 5%, #ffc477 100%);
+	background-color:#ff530f;
+}
+.btn_menu:active {
+	position:relative;
+	top:1px;
+}
+
+.btn:hover {
+  background-color: rgb(27, 37, 80);
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: rgb(76, 83, 121);
+}
+
+/*2- El contenido de las páginas deberá 
+estar centrado en un gran bloque de máximo 1024px de ancho.*/
+body {
+  background-color: #fff7d6;
+  max-width: 1024px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/*3- La foto debe tener un borde de 10px y con sombra.*/
+.foto {
+  border: 10px solid #fff7d6;
+  box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
+  border-radius: 50%;
+  width: 200px;
+  margin: 20px;
+  padding: 0px;
+}
+
+/*4- Debe haber un color de fondo en todas las páginas.*/
+
+:root {
+  background-color: rgb(51, 51, 51);
+  align-content: center;
+  padding: 30px;
+}
+
+/*5- Sea creativo y demuestre la aplicación de otros estilos CSS.*/
+
+.pag {
+  background-color: #1b2550;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 25px;
+}
+
+.texto2 {
+  text-align: left;
+}
+
+dd {
+  font-size: 17px;
+}
+
+h1,
+h2 {
+  color: #fff7d6;
+  font-size: 30px;
+}
+
+h3,
+h4,
+ul {
+  color: #fff7d6;
+  font-size: 20px;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff7d6;
+  text-decoration: none;
+}
+
+/*1-Crear 3 temas de colores para toda su hoja de vida y permitir cambiar 
+dichos temas por medio de alguna serie de botones o como usted lo crea pertinente,
+lo importante es poder hacer que su hoja de vida tenga 3 temas de colores en el cual 
+el usuario pueda seleccionar qué tema escoger. A continuación un ejemplo guía*/
+
+#tema1 {
+  background-color: #fff7d6;
+  box-shadow: 3px 3px 7px black;
+  color: black;
+}
+
+#tema2 {
+  background-color: #7689f3;
+  box-shadow: 3px 3px 7px black;
+}
+
+#tema3 {
+  background-color: #158582;
+  box-shadow: 3px 3px 7px black;
+}
+
+#tema4 {
+  background-color: #f9f871;
+  box-shadow: 3px 3px 7px black;
+  color: black;
+}
+
+/*2-En su hoja de vida deberá crear algo parecido a lo que se llama un efecto de acordeón,
+por favor tenga muy presente que no debe usar ninguna librería o framework externo para realizar este efecto, 
+pues lo único que se solicita es que de alguna forma usted haga que cuando se le haga clic al titulo o botón 
+que usted haya determinado para dicha situación, el contenido se le oculte sin necesidad de efectos de animación. 
+Esto debe ser aplicado en las páginas */
+
+.accordion {
+  font-size: 20px;
+  background-color: #fff7d6;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2px;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+/*caja del texto del acordeon*/
+.caja {
+  padding: 0 22px;
+  border-radius: 10px;
+  background-color: rgb(51, 51, 51);
+  display: block;
+  overflow: hidden;
+}

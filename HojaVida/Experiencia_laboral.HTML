@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/HojaVida/CSS/index.css" />
+    <script src="/HojaVida/JS/index.js"></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="temaPermanente(); accordion()">
+    <header>
+      <nav>
+        <a class="btn" href="/HojaVida/HV.HTML">Inicio</a>
+        <a class="btn" href="/HojaVida/Experiencia_laboral.HTML">Experiencia laboral</a>
+        <a class="btn" href="/HojaVida/Estudios_realizado.HTML">Estudios realizados</a>
+        <a class="btn" href="/HojaVida/Referencias_personales.HTML"
+          >Referencias Personales</a
+        >
+        <a class="btn" href="/HojaVida/Referencias_familiares.HTML"
+          >Referencias Familiares</a
+        >
+        <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      <a class="btn" onclick="selecTema1()" id="tema1">Tema 1</a>
+      <a class="btn" onclick="selecTema2()" id="tema2">Tema 2</a>
+      <a class="btn" onclick="selecTema3()" id="tema3">Tema 3</a>
+      <a class="btn" onclick="selecTema4()" id="tema4">Tema 4</a>
+
+      <h1 id="t1">Experiencia laboral</h1>
+      <article>
+        <button id="tt2" class="accordion">Help desk | Freelance</button>
+        <div class="caja">
+          <ul class="texto2">
+            <li>-Prestar ayuda eficiente a la empresa o cliente</li>
+            <li>-Manejar los problemas de rotura/arreglo y de configuración</li>
+            <li>-Guiar a los clientes hacia la solución del problema</li>
+            <li>
+              -Supervisar las herramientas disponibles para la solución de
+              incidentes (red, servidor…)
+            </li>
+            <li>
+              -Examinar la información y la capacitación disponible para el
+              personal
+            </li>
+            <li>
+              -Diagnóstico y resolución bajo procedimiento de incidencias
+              técnicas de los productos contratados por cliente.
+            </li>
+            <li>
+              -Resolución de problemas durante la provisión e instalación de los
+              servicios: mediación con otros proveedores, resolución de
+              conflictos orientadas a satisfacer las necesidades del usuario.
+            </li>
+            <li>
+              -Soporte funcional disponibilidad inmediata para ayudar el cliente
+              en medio presencial y remoto.
+            </li>
+            <li>
+              -Realizar mantenimiento periódico a los equipos de trabajo para
+              garantizar su correcto funcionamiento.
+            </li>
+            <li>-Guiar al cliente para adquirir productos tecnológicos</li>
+            <li>
+              -Realizar y organizar inventario de los productos en las
+              diferentes plataformas
+            </li>
+            <li>
+              -Realizar estudio de mercado para ayudar a la organización o
+              cliente a optimizar la tienda virtual ajustar precios y
+              disponibilidad de productos.
+            </li>
+          </ul>
+        </div>
+
+        <button id="tt3" class="accordion">
+          Ingeniero de Soporte Nivel 2 | Garden Tech S.A.S
+        </button>
+        <div class="caja">
+          <ul class="texto2">
+            <li>-Hallar soluciones con ayuda de la Base de Datos</li>
+            <li>-Cerrar o reasignar consultas e incidencias a otros niveles</li>
+            <li>-Manejar los problemas de rotura/arreglo y de configuración</li>
+            <li>-Guiar a los clientes hacia la solución del problema</li>
+            <li>
+              -Supervisar las herramientas disponibles para la solución de
+              incidentes (red, servidor…)
+            </li>
+            <li>
+              -Examinar la información y la capacitación disponible para el
+              soporte de primer nivel
+            </li>
+            <li>
+              -Diagnóstico y resolución bajo procedimiento de incidencias
+              técnicas de los productos contratados por cliente.
+            </li>
+            <li>
+              -Resolución de problemas durante la provisión e instalación de los
+              servicios: mediación con otros proveedores, resolución de
+              conflictos orientadas a satisfacer las necesidades del usuario.
+            </li>
+            <li>
+              -Soporte funcional al usuario en el uso de los productos
+              contratados.
+            </li>
+            <li>
+              -Prescripción de productos comerciales que pudiesen ser de ayuda
+              al usuario en la resolución de sus problemas.
+            </li>
+          </ul>
+        </div>
+
+        <button id="tt4" class="accordion">
+          Soporte de TI (Help Desk) | Hotel Casa Amarilla y Sedes.
+        </button>
+        <div class="caja">
+          <ul class="texto2">
+            <li>
+              -Administrar base de datos en SQL implementar sistemas de archivo
+              digitales para los documentos de la empresa para que los miembros
+              del equipo puedan acceder a los registros fácilmente y gestionar
+              actualizar los formularios.
+            </li>
+            <li>
+              -Controlar y gestionar todos los procesos documentales, incluyendo
+              la revisión de archivos, registros e información crítica,
+              confirmando la exactitud y el cumplimiento de las políticas y
+              procedimientos de la empresa.
+            </li>
+            <li>
+              -Mantenimiento y actualizaciones de todos los sistemas de la
+              oficina, incluyendo el hardware y el software de los ordenadores,
+              proporcionar soluciones a los problemas informáticos.
+            </li>
+            <li>
+              -Alimentar la base de datos con todos los documentos financieros y
+              facturas, contratos e informes de gastos.
+            </li>
+            <li>
+              -Gestión de transacciones, validación de transacciones, Servicios
+              Bancarios de la empresa y equipos de facturación.
+            </li>
+          </ul>
+        </div>
+
+        <button id="tt5" class="accordion">
+          Ingeniero de Soporte de nivel 1 | CLICK HD S.A.S
+        </button>
+        <div class="caja">
+          <ul class="texto2">
+            <li>
+              -Atender con suma atención las preocupaciones de los clientes y
+              responder a sus preguntas y prestar un nivel óptimo de atención
+              del servicio
+            </li>
+            <li>
+              -Actuar como jefe de equipo en soporte con el objetivo de promover
+              una estrecha cooperación para compartir información y desarrollar
+              soluciones
+            </li>
+            <li>
+              -Actuar como jefe de equipo en soporte con el objetivo de promover
+              una estrecha cooperación para compartir información y desarrollar
+              soluciones eficaces para la prestación de diversos servicios.
+            </li>
+          </ul>
+        </div>
+
+        <button id="tt6" class="accordion">
+          Analista Bases de Datos| ESE Hospital Local Santa María.
+        </button>
+        <div class="caja">
+          <ul class="texto2">
+            <li>
+              -Realizar visitas sistemáticas y programadas a las sedes de las
+              EPS en Cartagena, Barranquilla y Magangué con el fin de reforzar
+              los procedimientos de envío de soportes y otros aspectos críticos
+              de la facturación.
+            </li>
+            <li>
+              -Participar activamente en las reuniones de grupo de trabajo para
+              el diagnóstico, planes de mejoramiento, y gestión de la
+              información
+            </li>
+            <li>
+              -Solicitar mensualmente a las diferentes sedes las bases de datos
+              en TXT y actualizar para SQL en el servidor diariamente para
+              generar la facturación a las diferentes EPS
+            </li>
+            <li>
+              -Analizar la base de datos generada y validar la información con
+              el software de facturación y entregar a gerencia para su
+              correspondiente envío a las EPS
+            </li>
+          </ul>
+        </div>
+
+        <button id="tt7" class="accordion">
+          Analista de Datos| IPS San Francisco.
+        </button>
+        <div class="caja">
+          <ul class="texto2">
+            <li>
+              -Administrar las bases de datos de la empresa y realizar
+              seguimiento de las metas diarias
+            </li>
+            <li>
+              -Controlar y gestionar todos los procesos documentales, incluyendo
+              la revisión de archivos, registros e información crítica,
+              confirmando la exactitud y el cumplimiento de las políticas y
+              procedimientos de la empresa.
+            </li>
+            <li>
+              -Supervisar la recolección de archivos digitales, hojas de cálculo
+              e informes actualizados para los requisitos de las diferentes EPS.
+            </li>
+            <li>
+              -Actualizar y supervisar copias de seguridad, modificación,
+              actualización diaria de la base de datos en SQL de cada EPS.
+            </li>
+            <li>
+              -Brindar soporte técnico y ofimática a los diferentes equipos de
+              trabajo, y administrar las licencias de los programas
+            </li>
+          </ul>
+        </div>
+      </article>
+      <footer>
+        <h2 class="texto2" id="t2"><dd>Contacto</dd></h2>
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>

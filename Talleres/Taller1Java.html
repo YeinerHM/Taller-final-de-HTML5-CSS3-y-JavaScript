@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Talleres/CSS/index.css" />
+    <script src="/Talleres/JS/index.js"></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="accordion();">
+    <header>
+      <nav>
+        <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+        <a class="btn_menu" href="/Talleres/TMenu.html">Menu de Talleres</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      
+      <h1 id="t1">Talleres en Java - Realizar el taller #1 de PSeInt en Java</h1>
+      <article>
+        
+        <button class="accordion">Punto 1</button>
+        <div class="caja">
+          <h3>1-Realizar un programa el cual solicite su nombre y apellidos.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+
+            import Punto1.Punto1;
+
+
+            public class Main {
+            
+                public static void main(String[] args) {
+                    Punto1 punto = new Punto1();
+                    punto.Punto1();
+                }
+                
+            }
+            
+           </code></pre>
+           <p>Codigo Punto1:</p>
+           <pre><code>
+
+           
+package Punto1;
+
+import java.util.Scanner;
+
+public class Punto1 {
+    
+    private String nombre;
+    private String apellidos;
+    
+    
+    public void Punto1(){
+        solicitarNombre();
+        nombre = capturarDato();
+        
+        solicitarApellido();
+        apellidos = capturarDato();
+    }
+    
+    
+    private void solicitarNombre(){
+        System.out.print("Por favor digite su nombre: ");
+    }
+    
+    
+    private void solicitarApellido(){
+        System.out.print("Por favor digite sus apellidos: ");
+    }
+    
+    private String capturarDato(){
+        Scanner input = new Scanner (System.in);
+        return input.nextLine();
+    }
+}
+
+            
+           </code></pre>
+        </div>
+
+
+        <button class="accordion">Punto 2</button>
+        <div class="caja">
+          <h3>2-Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+import Punto2.Punto2;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Punto2 punto = new Punto2();
+        punto.Punto2();
+    }
+    
+}
+           </code></pre>
+           <p>Codigo Punto2:</p>
+           <pre><code>
+            package Punto2;
+
+            import java.util.Scanner;
+            
+            public class Punto2 {
+                
+                private String nombre;
+                private String apellido;
+                private int edad;
+                private double estatura;
+                private Scanner input = new Scanner (System.in);
+                    ;
+                
+                
+                
+                public void Punto2(){
+                    
+                    solicitarNombre();
+                    nombre = capturarDatoString();
+                    
+                    solicitarApellido();
+                    apellido = capturarDatoString();
+                    
+                    solicitarEdad();
+                    edad = capturarDatoInt();
+                    
+                    solicitarEstatura();
+                    estatura = capturarDatoDouble();
+                }
+                
+                
+                private void solicitarNombre(){
+                    System.out.print("Por favor digite su nombre: ");
+                }
+                
+                
+                private void solicitarApellido(){System.out.print("Por favor digite sus apellidos: ");}
+                
+                private void solicitarEdad(){System.out.print("Por favor digite su edad: ");}
+                
+                private void solicitarEstatura(){System.out.print("Por favor digite su estatura: ");}
+                
+                private String capturarDatoString(){return input.nextLine();}
+                
+                private int capturarDatoInt(){return input.nextInt();}
+                
+                private double capturarDatoDouble(){return input.nextDouble();}
+            }
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 3</button>
+        <div class="caja">
+          <h3>3-Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            import Punto3.Punto3;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Punto3 punto = new Punto3();
+        punto.Punto3();
+    }
+    
+}
+
+           </code></pre>
+           <p>Codigo Punto3:</p>
+           <pre><code>
+            package Punto3;
+
+import java.util.Scanner;
+
+public class Punto3 {
+    
+    private String nombre;
+    private String apellido;
+    private String nombreP;
+    private String apellidoP;
+    private String nombreM;
+    private String apellidoM;
+    private Scanner input = new Scanner (System.in);
+    
+    
+    public void Punto3(){
+        
+        solicitarNombre();
+        nombre = capturarDatoString();
+        
+        solicitarApellido();
+        apellido = capturarDatoString();
+        
+        solicitarNombreP();
+        nombreP = capturarDatoString();
+        
+        solicitarApellidoP();
+        apellidoP = capturarDatoString();
+        
+        solicitarNombreM();
+        nombreM = capturarDatoString();
+        
+        solicitarApellidoM();
+        apellidoM = capturarDatoString();
+        
+        imprimirMensaje();
+    }
+    
+    //Metodos
+    private void solicitarNombre(){System.out.print("Por favor digite su nombre: ");}
+    private void solicitarApellido(){System.out.print("Por favor digite sus apellidos: ");}
+    private void solicitarNombreP(){System.out.print("Por favor dijite nombre de su padre: ");}
+    private void solicitarApellidoP(){System.out.print("Por favor dijite apellidos de su padre: ");}
+    private void solicitarNombreM(){System.out.print("Por favor dijite nombre de su madre: ");}
+    private void solicitarApellidoM(){System.out.print("Por favor dijite apellidos de su madre: ");}
+    private void imprimirMensaje(){System.out.println("Yo "+ nombre+" "+apellido+", soy hijo de "+ nombreM+" "+apellidoM+" "+"y "+ nombreP+" "+apellidoP);}
+    
+    private String capturarDatoString(){return input.nextLine();}
+    
+}
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 4</button>
+        <div class="caja">
+          <h3>4-Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            import Punto4.Punto4;
+
+
+            public class Main {
+            
+                public static void main(String[] args) {
+                    Punto4 punto = new Punto4();
+                    punto.Punto4();
+                }
+                
+            }
+           </code></pre>
+           <p>Codigo Punto4:</p>
+           <pre><code>
+            package Punto4;
+
+import java.util.Scanner;
+
+public class Punto4 {
+    
+    private String pais;
+    private String ciudadCapital;
+    private Scanner input = new Scanner (System.in);
+    
+    
+    //Atributos
+    public void Punto4(){
+        
+        solicitarPais();
+        pais = capturarDatoString();
+        
+        solicitarCiudadCapital();
+        ciudadCapital = capturarDatoString();
+        
+        imprimirMensaje();
+    }
+    
+    //Metodos
+    private void solicitarPais(){System.out.print("Por favor digite Pais: ");}
+    private void solicitarCiudadCapital(){System.out.print("Por favor digite la ciudad capital: ");}
+    private void imprimirMensaje(){System.out.println( "La ciudad "+ciudadCapital+", es la capital del país "+pais);}
+    
+    private String capturarDatoString(){return input.nextLine();}
+    
+}
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 5</button>
+        <div class="caja">
+          <h3>5-Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</h3>
+          <p>Codigo Main:</p>
+           <pre><code>
+            import Paquete5.Punto5;
+
+
+            public class Main {
+            
+                public static void main(String[] args) {
+                    Punto5 punto = new Punto5();
+                    punto.Punto5();
+                }
+                
+            }
+           </code></pre>
+           <p>Codigo Punto5:</p>
+           <pre><code>
+            package Paquete5;
+
+            import java.util.Scanner;
+            
+            public class Punto5 {
+                
+                private String mascotaNombre;
+                private String tipoMascota;
+                private int mascotaEdad;
+                private String nombreDueno;
+                private Scanner input = new Scanner (System.in);
+                
+                
+                
+                public void Punto5(){
+                    
+                    leerNombreDueno();
+                    nombreDueno = capturarDatoString();
+                    
+                    leerMascotaNombre();
+                    mascotaNombre = capturarDatoString();
+                    
+                    leerTipoMascota();
+                    tipoMascota = capturarDatoString();
+                    
+                    leerMascotaEdad();
+                    mascotaEdad = capturarDatoInt();
+                    
+                    imprimirMensaje();
+                }
+                
+                
+                private void leerMascotaNombre(){
+                    System.out.print("Por favor digite nombre de la mascota: ");
+                }
+                private void leerTipoMascota(){
+                    System.out.print("Por favor digite tipo de mascota: ");}
+                private void leerMascotaEdad(){System.out.print("Por favor digite edad de la mascota: ");
+                }
+                private void leerNombreDueno(){
+                    System.out.print("Por favor digite nombre del dueño: ");
+                }
+                private void imprimirMensaje(){
+                    System.out.println(mascotaNombre+" es un(a) "+tipoMascota+", el cual, tiene "+mascotaEdad+" años de edad y "+nombreDueno+" es actualmente su dueño(a).");
+                }
+                
+                
+                private String capturarDatoString(){
+                    return input.nextLine();
+                }
+                private int capturarDatoInt(){
+                    return input.nextInt();
+                }
+            }
+           </code></pre>
+        </div>
+
+      </article>
+      <footer>
+        <h2 class="texto2" id="t2"><dd>Contacto</dd></h2>
+
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>

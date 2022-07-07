@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Talleres/CSS/index.css" />
+    <script src="/Talleres/JS/index.js"></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="accordion();">
+    <header>
+      <nav>
+        <a class="btn_menu" href="/index.html">Volver al Menu</a>
+        <a class="btn_menu" href="/Talleres/TMenu.html">Menu de Talleres</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      
+
+      <h1 id="t1">Talleres en PSeInt - Taller de variables e impresión</h1>
+      <article>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zylDzbYbVM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button class="accordion" >Punto 1</button>
+        <div class="caja">
+          <h3>1-Realizar un programa el cual solicite su nombre y apellidos.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+  Proceso Taller_01_1
+    Definir nombre Como Caracter;
+    Definir apellido Como Caracter;
+	
+    Escribir "¿Como te llamas?";
+    Leer nombre;
+	
+    Escribir "¿Como es tu apellido?";
+    Leer apellido;
+	
+    Escribir "Tu nombre es ",nombre," y tu appellido es ",apellido;
+  FinProceso
+           </code></pre>
+        </div>
+
+
+        <button class="accordion">Punto 2</button>
+        <div class="caja">
+          <h3>2-Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+  Proceso Taller_01_2
+	Definir nombre Como Caracter;
+	Definir apellidos Como Caracter;
+	Definir edad Como Entero;
+	Definir estatura Como Real;
+	
+	Escribir "¿Como te llamas?";
+	Leer nombre;
+	
+	Escribir "¿Como son tu apellidos?";
+	Leer apellidos;
+	
+	Escribir "¿Que edad tienes?";
+	Leer edad;
+	
+	Escribir "¿Cual es tu estatura?";
+	Leer estatura;
+	
+	Escribir "Tu nombre es ",nombre," appellidos: ",apellidos," edad; ",edad," estatura: ",estatura;
+  FinProceso
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 3</button>
+        <div class="caja">
+          <h3>3-Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre].</h3>
+          <p>Codigo:</p>
+           <pre><code>
+  Proceso Taller_01_3
+	Definir nombre_completo_hijo Como Caracter;
+	Definir nombre_completo_padre Como Caracter;
+	Definir nombre_completo_madre Como Caracter;
+	
+	
+	Escribir "¿Por favor Ingresar Nombre Y Apellidos?";
+	Leer nombre_completo_hijo;
+	
+	Escribir "¿Por favor Ingresar Nombre Y Apellidos del Padre?";
+	Leer nombre_completo_padre;
+	
+	Escribir "¿Por favor Ingresar Nombre Y Apellidos de la Madre?";
+	Leer nombre_completo_madre;
+	
+	Escribir "Yo ",nombre_completo_hijo,",soy hijo de ",nombre_completo_madre," y ",nombre_completo_padre;
+  FinProceso
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 4</button>
+        <div class="caja">
+          <h3>4-Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]</h3>
+          <p>Codigo:</p>
+           <pre><code>
+  Proceso Taller_01_4
+	Definir pais Como Caracter;
+	Definir ciudad_capital Como Caracter;	
+	
+	Escribir "¿Ingrese el Nombre de la Ciudad Capital?";
+	Leer ciudad_capital;
+	
+	Escribir "¿Por favor Ingresar Pais?";
+	Leer pais;
+	
+	Escribir "La ciudad ",ciudad_capital ,", es la capital del país ",pais;
+  FinProceso
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 5</button>
+        <div class="caja">
+          <h3>5-Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es actualmente su dueño(a).</h3>
+          <p>Codigo:</p>
+           <pre><code>
+  Proceso Taller_01_5
+	Definir nombre_mascota Como Caracter;
+	Definir edad_mascota Como Entero;
+	Definir tipo_mascota Como Caracter;
+	Definir nombrecompleto_dueno Como Caracter;
+	
+	Escribir "¿Por favor Ingresar su Nombre Completo?";
+	Leer nombrecompleto_dueno;
+	
+	Escribir "¿Por favor Ingresar Nombre de la mascota?";
+	Leer nombre_mascota;
+	
+	Escribir "¿Por favor Ingresar edad de la mascota?";
+	Leer edad_mascota;
+	
+	Escribir "¿Por favor Ingresar Tipo de mascota?";
+	Leer tipo_mascota;
+	
+	Escribir nombre_mascota," es un(a) ",tipo_mascota, " el cual, tiene ",edad_mascota," años de edad y ",nombrecompleto_dueno," es actualmente su dueño(a)";
+  FinProceso
+
+           </code></pre>
+        </div>
+
+      </article>
+      <footer>
+        <h2 class="texto2" id="t2"><dd>Contacto</dd></h2>
+
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>

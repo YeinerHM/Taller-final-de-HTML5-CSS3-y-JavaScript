@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Talleres/CSS/index.css" />
+    <script src="/Talleres/JS/index.js""></script>
+    <title>Hoja_de_vida</title>
+  </head>
+
+  <body id="body" onload="accordion();">
+    <header>
+      <nav>
+        <a class="btn_menu" href="/Index.html">Volver al Menu</a>
+        <a class="btn_menu" href="/Talleres/TMenu.html">Menu de Talleres</a>
+      </nav>
+    </header>
+
+    <main class="pag">
+      
+
+      <h1 id="t1">Talleres en PSeInt - Taller de condicionales</h1>
+      <article>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6QLiXd1EbUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button class="accordion">Punto 1</button>
+        <div class="caja">
+          <h3>1-Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, deberá mostrar en pantalla: Usted es mayor de edad.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+  Proceso Taller_02_1
+	Definir edad Como Entero;
+	
+	Escribir "Ingrese su edad";
+	Leer edad;
+	
+	si edad >= 18 Entonces
+		Escribir "Usted es mayor de edad";
+	FinSi
+  FinProceso
+           </code></pre>
+        </div>
+
+
+        <button class="accordion" >Punto 2</button>
+        <div class="caja">
+          <h3>2-Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, deberá mostrar en pantalla: Usted aún es un niño(a).</h3>
+          <p>Codigo:</p>
+           <pre><code>
+          Proceso Taller_02_2
+            Definir edad Como Entero;
+            
+            Escribir "Ingrese su edad";
+            Leer edad;
+            
+            si edad >= 18 Entonces
+              Escribir "Usted es mayor de edad";
+              
+            SiNo
+              Escribir "Usted aun es un niño(a)";
+            FinSi
+          FinProceso
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 3</button>
+        <div class="caja">
+          <h3>3-Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+  Proceso Taller_02_3
+	Definir nombre Como Caracter;
+	Definir apellidos Como Caracter;
+	Definir edad Como Entero;
+	
+	Escribir "Ingrese su Nombre";
+	Leer nombre;
+	
+	Escribir "Ingrese Apellidos";
+	Leer apellidos;
+	
+	Escribir "Ingrese su Edad";
+	Leer edad;
+	
+	si edad >= 18 Entonces
+		Escribir nombre," ",apellidos," usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+		
+	SiNo
+		Escribir nombre," ",apellidos," usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.";
+	FinSi
+  FinProceso
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 4</button>
+        <div class="caja">
+          <h3>4-La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños u otra novedad sobre la película.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+  Proceso Taller_02_4
+	Definir nombre_usuario Como Caracter;
+	Definir telefono_usuario Como Caracter;
+	Definir direccion_usuario Como Caracter;
+	Definir opcion Como Entero;
+	Definir entrega Como Caracter;
+	
+	
+	escribir "Video Tienda Barrio Potvenir (Alquiler de peliculas)";
+	
+	Escribir "Menu";
+	Escribir "1-Consultar peliculas Disponibles";
+	Escribir "2-Alquiler de Eliculas";
+	Escribir "3-Recibir o Devolver pelicula";
+	Escribir "4-Salir del Menu";
+	leer opcion;
+	
+	Limpiar Pantalla;
+	
+	Segun opcion Hacer
+		1:
+			Escribir "-----Consultar peliculas Disponibles------";
+			Escribir "------Generos-------";
+			Escribir "1-Accion";
+			Escribir "2-Terror";
+			Escribir "3-Animadas";
+			Escribir "4-Drama";
+			Escribir "5-Cancelar";
+			Leer opcion;
+			Segun opcion Hacer
+				1:
+					Escribir "----Accion-----";
+					Escribir "Batman";
+					Escribir "El Transportador";
+					Escribir "Carnage";
+				2:
+					Escribir "----Terror-----";
+					Escribir "Chuky";
+					Escribir "Ana Belle";
+					Escribir "Casadores de fantasmas";
+				3:
+					Escribir "----Animadas-----";
+					Escribir "Encanto";
+					Escribir "Even Mice Belong in Heaven";
+					Escribir "Rumble";
+				4:
+					Escribir "----Drama-----";
+					Escribir "Spencer";
+					Escribir "La casa Gucci";
+					Escribir "Coda";
+					
+				5:
+					Escribir "Opcion Cancelada";
+				De Otro Modo:
+					Escribir "La opcion Elegida no existe";
+			FinSegun
+		2:
+			Escribir "----Alquiler de Peliculas----";
+			Escribir "------Generos-------";
+			Escribir "1-Accion";
+			Escribir "2-Terror";
+			Escribir "3-Animadas";
+			Escribir "4-Drama";
+			Escribir "5-Cancelar";
+			Leer opcion;
+			Limpiar Pantalla;
+			
+			
+			Segun opcion Hacer
+				1:
+					Escribir "----Accion-----";
+					Escribir "1-Batman";
+					Escribir "2-El Transportador";
+					Escribir "3-Carnage";
+					Escribir "4-Cancelar la opcion";
+					Escribir "Escoja una pelicula";
+					Leer opcion;
+					Limpiar Pantalla;
+					
+					Segun opcion hacer
+						1:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala Batman del Genero Accion";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						2:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala El Transportador del Genero Accion";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						3:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala Carnage del Genero Accion";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						4:
+							Escribir "Opcion Cancelada";
+						De Otro Modo:
+							Escribir "La opcion Elegida no existe";
+					FinSegun
+				2:
+					Escribir "----Terror-----";
+					Escribir "1-Chuky";
+					Escribir "2-Ana Belle";
+					Escribir "3-Casadores de fantasmas";
+					Escribir "4-Cancelar la opcion";
+					Escribir "Escoja una pelicula";
+					Leer opcion;
+					Limpiar Pantalla;
+					
+					Segun opcion hacer
+						1:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala Chuky del Genero Terror";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						2:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala Ana Belle del Genero Terror";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						3:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala Casadores de fantasmas del Genero Terror";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						4:
+							Escribir "Opcion Cancelada";
+						De Otro Modo:
+							Escribir "La opcion Elegida no existe";
+					FinSegun
+				3:
+					Escribir "----Animadas-----";
+					Escribir "1-Encanto";
+					Escribir "2-Even Mice Belong in Heaven";
+					Escribir "3-Rumble";
+					Escribir "4-Cancelar la opcion";
+					Escribir "Escoja una pelicula";
+					Leer opcion;
+					Limpiar Pantalla;
+					
+					Segun opcion hacer
+						1:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala Encanto del Genero Animadas";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						2:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala Even Mice Belong in Heaven del Genero Animadas";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						3:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala Rumble del Genero Animadas";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						4:
+							Escribir "Opcion Cancelada";
+						De Otro Modo:
+							Escribir "La opcion Elegida no existe";
+					FinSegun
+				4:
+					Escribir "----Drama-----";
+					Escribir "1-Spencer";
+					Escribir "2-La casa Gucci";
+					Escribir "3-Coda";
+					Escribir "4-Cancelar la opcion";
+					Escribir "Escoja una pelicula";
+					Leer opcion;
+					Limpiar Pantalla;
+					
+					Segun opcion hacer
+						1:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala Spencer del Genero Drama";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						2:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala La casa Gucci del Genero Drama";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						3:
+							Escribir "Por favor ingrese nombre completo";
+							Leer nombre_usuario;
+							Escribir "Por favor ingrese su direccion";
+							Leer direccion_usuario;
+							Escribir "Por favor ingrese su numero de telefono";
+							Leer telefono_usuario;
+							Limpiar Pantalla;
+							Escribir "Alquilo la pelicuala Coda del Genero Drama";
+							Escribir "Datos del Cliente";
+							Escribir "Nombre: ",nombre_usuario;
+							Escribir "Telefono: ",telefono_usuario;
+							Escribir "Direccion: ",direccion_usuario;
+						4:
+							Escribir "Opcion Cancelada";
+						De Otro Modo:
+							Escribir "La opcion Elegida no existe";
+					FinSegun
+					
+				5:
+					Escribir "Opcion Cancelada";
+				De Otro Modo:
+					Escribir "La opcion Elegida no existe";
+			FinSegun
+		3:
+			Escribir "----Recibir o Devolver pelicula----";
+			Escribir "1-¿La pelicula Presenta daños?";
+			Escribir "2-¿La pelicula esta en Buen estado?";
+			Escribir "3-Cancelar";
+			Leer opcion;
+			Limpiar Pantalla;
+			Segun opcion Hacer
+				1:
+					Escribir "Describa los Daños que presenta la pelicula";
+					Leer entrega;
+					Escribir "Por favor ingrese nombre completo";
+					Leer nombre_usuario;
+					Escribir "Por favor ingrese su direccion";
+					Leer direccion_usuario;
+					Escribir "Por favor ingrese su numero de telefono";
+					Leer telefono_usuario;
+					Limpiar Pantalla;
+					Escribir "La pelicula presenta daños como: ",entrega;
+					Escribir "Datos del Cliente responsable";
+					Escribir "Nombre: ",nombre_usuario;
+					Escribir "Telefono: ",telefono_usuario;
+					Escribir "Direccion: ",direccion_usuario;
+					Escribir "Se cancela los daños que tenga la pelicula en caja";
+				2:
+					Escribir "Puede agregar observaciones de la entraga de la pelicula";
+					Leer entrega;
+					Escribir "Por favor ingrese nombre completo";
+					Leer nombre_usuario;
+					Escribir "Por favor ingrese su direccion";
+					Leer direccion_usuario;
+					Escribir "Por favor ingrese su numero de telefono";
+					Leer telefono_usuario;
+					Limpiar Pantalla;
+					Escribir "La pelicula no presenta daños observaciones: ",entrega;
+					Escribir "Datos del Cliente responsable";
+					Escribir "Nombre: ",nombre_usuario;
+					Escribir "Telefono: ",telefono_usuario;
+					Escribir "Direccion: ",direccion_usuario;
+					Escribir "Se cancela los daños que tenga la pelicula en caja";
+					
+				3:
+					Escribir "Opcion Cancelada";
+				De Otro Modo:
+					Escribir "La opcion Elegida no existe";
+			FinSegun
+			
+		4:
+			Escribir "Cerrando Menu";
+		De Otro Modo:
+			Escribir "La opcion Elegida no existe";
+	FinSegun
+  FinProceso
+
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 5</button>
+        <div class="caja">
+          <h3>5-La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se presenten.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+            Proceso Taller_02_5
+            Definir opcion Como Entero;
+            Definir cliente Como Caracter;
+            
+            Escribir "--------Droguería Mi Salud--------";
+            Escribir "Menu";
+            Escribir "1-Compra de producto";
+            Escribir "2-Consulta de Precios";
+            Escribir "3-Devoluciones";
+            Escribir "4-salir";
+            Leer opcion;
+            Limpiar Pantalla;
+            Escribir "Ingrese Nombre de cliente";
+            Leer cliente;
+            Limpiar Pantalla;
+            
+            Segun opcion Hacer
+              1:
+                Escribir "-------Compra de Producto----------";
+                Escribir "Menu";
+                Escribir "1-Medicamentos";
+                Escribir "2-Cosméticos";
+                Escribir "3-Cancelar";
+                Leer opcion;
+                Limpiar Pantalla;
+                
+                Segun opcion Hacer
+                  1:
+                    Escribir "-------Escoja el medicamento a comprar--------";
+                    Escribir "1-Nolotil-Precio: $15";
+                    Escribir "2-Adiro 10-Precio: $12";
+                    Escribir "3-Sintrom-Precio: $20";
+                    Escribir "4-Cancelar";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "El Cliente ",cliente," a Comprado el Producto";
+                        Escribir "Nolotil: El Nolotil, junto a otros analgésicos de esta lista como el Paracetamol Kern y Cinfa y el Enantyum son medicamentos comunes para reducir dolores musculares o articulares, así como para bajar la fiebre.";
+                        Escribir "Precio: $15";
+                      2:
+                        Escribir "El Cliente ",cliente," a Comprado el Producto";
+                        Escribir "Adiro 10: El Adiro 10 se receta para prevenir la formación de trombos y ayuda a reducir el riesgo de obstrucciones arteriales, por lo que es consumido por personas con problemas cardiovasculares.";
+                        Escribir "Precio: $12";
+                      3:
+                        Escribir "El Cliente ",cliente," a Comprado el Producto";
+                        Escribir "Sintrom: El Sintrom ayuda a prevenir la formación de coágulos, disminuyendo la capacidad de coagular de la sangre. Lo suelen utilizar personas con gran riesgo de padecer trombos o que ya tienen alguno.";
+                        Escribir "Precio: $20";
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                  2:
+                    Escribir "-------Escoja cosmético a comprar-------";
+                    Escribir "1-Crema Solar X-Precio: $35";
+                    Escribir "2-Desodorante FG-Precio: $22";
+                    Escribir "3-Pasta dental KM-Precio: $18";
+                    Escribir "4-Cancelar";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "El Cliente ",cliente," a Comprado el Producto";
+                        Escribir "Crema Solar X: Proteccion solar por 12 horas contra los rayos uv";
+                        Escribir "Precio: $35";
+                      2:
+                        Escribir "El Cliente ",cliente," a Comprado el Producto";
+                        Escribir "Desodorante FG: Proteccion contra el mal olor 24 horas";
+                        Escribir "Precio: $22";
+                      3:
+                        Escribir "El Cliente ",cliente," a Comprado el Producto";
+                        Escribir "Pasta dental KM: Pasta dental con fluor y proteccion contra la placa";
+                        Escribir "Precio: $18";
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                    
+                  3:
+                    Escribir "Cerrando Sistema";
+                  De Otro Modo:
+                    Escribir "La opcion Elegida no existe";
+                FinSegun
+                
+              2:
+                Escribir "-------consulta de Precios---------";
+                Escribir "Menu de Productos";
+                Escribir "1-Medicamentos";
+                Escribir "2-Cosméticos";
+                Escribir "3-Cancelar";
+                Leer opcion;
+                Limpiar Pantalla;
+                
+                Segun opcion Hacer
+                  1:
+                    Escribir "-------Medicamentos--------";
+                    Escribir "1-Nolotil";
+                    Escribir "2-Adiro 10";
+                    Escribir "3-Sintrom";
+                    Escribir "4-Cancelar";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "El cliente ",cliente," a consultado el Producto";
+                        Escribir "Nolotil: El Nolotil, junto a otros analgésicos de esta lista como el Paracetamol Kern y Cinfa y el Enantyum son medicamentos comunes para reducir dolores musculares o articulares, así como para bajar la fiebre.";
+                        Escribir "Precio: $15";
+                      2:
+                        Escribir "El cliente",cliente,"a consiltado el Producto";
+                        Escribir "Adiro 10: El Adiro 10 se receta para prevenir la formación de trombos y ayuda a reducir el riesgo de obstrucciones arteriales, por lo que es consumido por personas con problemas cardiovasculares.";
+                        Escribir "Precio: $12";
+                      3:
+                        Escribir "El cliente ",cliente," a consultado el Producto";
+                        Escribir "Sintrom: El Sintrom ayuda a prevenir la formación de coágulos, disminuyendo la capacidad de coagular de la sangre. Lo suelen utilizar personas con gran riesgo de padecer trombos o que ya tienen alguno.";
+                        Escribir "Precio: $20";
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                  2:
+                    Escribir "-------Cosméticos-------";
+                    Escribir "1-Crema Solar X";
+                    Escribir "2-Desodorante FG";
+                    Escribir "3-Pasta dental KM";
+                    Escribir "4-Cancelar";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "El cliente ",cliente," a consultado el Producto";
+                        Escribir "Crema Solar X: Proteccion solar por 12 horas contra los rayos uv";
+                        Escribir "Precio: $35";
+                      2:
+                        Escribir "El cliente ",cliente," a consultado el Producto";
+                        Escribir "Desodorante FG: Proteccion contra el mal olor 24 horas";
+                        Escribir "Precio: $22";
+                      3:
+                        Escribir "El cliente ",cliente," a consultado el Producto";
+                        Escribir "Pasta dental KM: Pasta dental con fluor y proteccion contra la placa";
+                        Escribir "Precio: $18";
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                    
+                  3:
+                    Escribir "Cerrando Sistema";
+                  De Otro Modo:
+                    Escribir "La opcion Elegida no existe";
+                FinSegun
+                
+              3:
+                Escribir "--------Devoluciones----------";
+                Escribir "Menu de Productos";
+                Escribir "1-Medicamentos";
+                Escribir "2-Cosméticos";
+                Escribir "3-Cancelar";
+                Leer opcion;
+                Limpiar Pantalla;
+                
+                Segun opcion Hacer
+                  1:
+                    Escribir "-------Devolucion de Medicamentos--------";
+                    Escribir "1-Nolotil";
+                    Escribir "2-Adiro 10";
+                    Escribir "3-Sintrom";
+                    Escribir "4-Cancelar";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "El cliente ",cliente," Adevuelto este Producto";
+                        Escribir "Nolotil: El Nolotil, junto a otros analgésicos de esta lista como el Paracetamol Kern y Cinfa y el Enantyum son medicamentos comunes para reducir dolores musculares o articulares, así como para bajar la fiebre.";
+                        Escribir "Precio: $15";
+                      2:
+                        Escribir "El cliente ",cliente," Adevuelto este Producto";
+                        Escribir "Adiro 10: El Adiro 10 se receta para prevenir la formación de trombos y ayuda a reducir el riesgo de obstrucciones arteriales, por lo que es consumido por personas con problemas cardiovasculares.";
+                        Escribir "Precio: $12";
+                      3:
+                        Escribir "El cliente ",cliente," Adevuelto este Producto";
+                        Escribir "Sintrom: El Sintrom ayuda a prevenir la formación de coágulos, disminuyendo la capacidad de coagular de la sangre. Lo suelen utilizar personas con gran riesgo de padecer trombos o que ya tienen alguno.";
+                        Escribir "Precio: $20";
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                  2:
+                    Escribir "-------Devolucion de Cosméticos-------";
+                    Escribir "1-Crema Solar X";
+                    Escribir "2-Desodorante FG";
+                    Escribir "3-Pasta dental KM";
+                    Escribir "4-Cancelar";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "El cliente ",cliente," Adevuelto este Producto";
+                        Escribir "Crema Solar X: Proteccion solar por 12 horas contra los rayos uv";
+                        Escribir "Precio: $35";
+                      2:
+                        Escribir "El cliente ",cliente," Adevuelto este Producto";
+                        Escribir "Desodorante FG: Proteccion contra el mal olor 24 horas";
+                        Escribir "Precio: $22";
+                      3:
+                        Escribir "El cliente ",cliente," Adevuelto este Producto";
+                        Escribir "Pasta dental KM: Pasta dental con fluor y proteccion contra la placa";
+                        Escribir "Precio: $18";
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                    
+                  3:
+                    Escribir "Cerrando Sistema";
+                  De Otro Modo:
+                    Escribir "La opcion Elegida no existe";
+                FinSegun
+                
+              4:
+                Escribir "Cerrando Sistema";
+              De Otro Modo:
+                Escribir "La opcion Elegida no existe";
+            FinSegun
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 6</button>
+        <div class="caja">
+          <h3>6-El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+            Proceso Taller_02_6
+            Definir ob_cliente Como Caracter;
+            Definir motivo Como Caracter;
+            Definir opcion Como Entero;
+            Definir cliente Como Caracter;
+            Definir datos_m Como Caracter;
+            Definir fecha Como Caracter;
+            Definir salida Como Caracter;
+            Definir arreglos Como Caracter;
+            
+            Escribir "------Taller de Motos------";
+            Escribir "------El Maquinista-------";
+            Escribir "Menu";
+            Escribir "1-Ingreso y salida del taller";
+            Escribir "2-Cancelar";
+            Leer opcion;
+            Limpiar Pantalla;
+            
+            Segun opcion Hacer
+              1:
+                Escribir "------Ingreso al taller-----";
+                Escribir "Ingrese Motivo de ingreso";
+                Leer motivo;
+                Limpiar Pantalla;
+                Escribir "Observaciones por parte del cliente";
+                leer ob_cliente;
+                Limpiar Pantalla;
+                Escribir "Nombre de propietario";
+                Leer cliente;
+                Limpiar Pantalla;
+                Escribir "Ingrese en el siguiente orden datos del Vehiculo";
+                Escribir "Placas,Color,Cilindraje";
+                Leer datos_m;
+                Limpiar Pantalla;
+                Escribir "Fecha de ingreso Dia-Mes-Año";
+                leer fecha;
+                Limpiar Pantalla;
+                Escribir "Ingreso realizado con exito";
+                Escribir "-----------Datos de ingreso-----------";
+                Escribir "Nombre del Cliente: ",cliente;
+                Escribir "___________________Placa_Color_Cilindraje";
+                Escribir "Datos del Vehiculo: ",datos_m;
+                Escribir "Motivo de ingreso: ",motivo;
+                Escribir "Observaciones del cliente: ",ob_cliente;
+                Escribir "Fecha de Ingreso: ",fecha;
+                Escribir "Desea dar salida al vehiculo precione 1 o  2 para salir del programa ";
+                Leer opcion;
+                Limpiar Pantalla;
+                Segun opcion Hacer
+                  1:
+                    Escribir"--------Salidas de Vehiculos--------";
+                    Escribir "Registro de Salida";
+                    Escribir "Porfavor ingrese Novedades";
+                    Leer salida;
+                    Limpiar Pantalla;
+                    Escribir "Porfavor ingrese arreglos hechos y respuestos utilizados";
+                    Leer arreglos;
+                    Limpiar Pantalla;
+                    
+                    Escribir "-----------Datos al ingresar al taller-----------";
+                    Escribir "Nombre del Cliente: ",cliente;
+                    Escribir "___________________Placa_Color_Cilindraje";
+                    Escribir "Datos del Vehiculo: ",datos_m;
+                    Escribir "Motivo de ingreso: ",motivo;
+                    Escribir "Observaciones del cliente: ",ob_cliente;
+                    Escribir "Fecha de Ingreso: ",fecha;
+                    Escribir "------------Datos de salida-----------";
+                    Escribir "Novedades: ",salida;
+                    Escribir "Arreglos y Respuestos: ",arreglos;
+                    Escribir"Salida exitosa";
+                  2:
+                    Escribir "Cerrando Sistema";
+                  De Otro Modo:
+                    Escribir "La opcion Elegida no existe";
+                FinSegun
+              2:
+                Escribir "Cerrando Sistema";
+              De Otro Modo:
+                Escribir "La opcion Elegida no existe";
+            FinSegun
+            
+            
+            
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 7</button>
+        <div class="caja">
+          <h3>7-La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).</h3>
+          <p>Codigo:</p>
+           <pre><code>
+  Proceso Taller_02_7
+	Definir peso Como Real;
+	Definir altura Como Real;
+	Definir nombre Como Caracter;
+	Definir imc Como Real;
+	
+	Escribir "Secretaria de Salud Municipal";
+	Escribir "Calcular su indice de masa corporal";
+	Escribir "Ingrese su Nombre";
+	Leer nombre;
+	Escribir "Ingrese su Peso en kilogramos";
+	Leer peso;
+	Escribir "Ingrese su Altura en metros";
+	Leer altura;
+	altura <- altura*altura;
+	imc <- peso/altura;
+	Escribir nombre," su IMC es ",imc;
+	si(imc<18.5) Entonces
+		Escribir "Bajo peso";
+	SiNo
+		si(imc>=18.5 y imc<=24.9) Entonces
+			Escribir "Normal";
+		SiNo
+			Si(imc>=25.0 y imc<=30) Entonces
+				Escribir "sobre peso";
+			SiNo
+				Escribir "Obeso";
+			FinSi
+			
+		FinSi
+		
+	FinSi
+	
+  FinProceso
+
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 8</button>
+        <div class="caja">
+          <h3>8-El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren diariamente.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+            Proceso Taller_02_8
+            Definir opcion Como Entero;
+            Definir opcion_2 Como Caracter;
+            
+            Escribir "Pasteleria Don Carlos";
+            Escribir "------Menu------";
+            Escribir "1-Tortas Disponibles";
+            Escribir "2-Pedidos";
+            Escribir "3-Ventas";
+            Escribir "4-Cerrar Programa";
+            Leer opcion;
+            Limpiar Pantalla;
+            
+            Segun opcion Hacer
+              1:
+                Escribir "------Tortas Disponibles------";
+                Escribir "Sabores";
+                Escribir "1-Torta de Chocolate";
+                Escribir "2-Torta de Vainilla";
+                Escribir "3-Torta de Arequipe";
+                Escribir "4-Torta de Coco";
+                Escribir "5-Torta de tres leches fria";
+                Leer opcion;
+                Limpiar Pantalla;
+                
+                
+                Segun opcion Hacer
+                  1:
+                    Escribir "Torta de Chocolate";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Cuenta Con los Tamaños y Porciones siquientes";
+                    Escribir "1-Pequeña con 4 Porciones";
+                    Escribir "2-Mediana con 8 Prociones";
+                    Escribir "3-Grande con 16 Porciones";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Cuenta con las siguientes decoraciones Disponibles";
+                    Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                    Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                    Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Fin";
+                  2:
+                    Escribir "Torta de Vainilla";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Cuenta Con los Tamaños y Porciones siquientes";
+                    Escribir "1-Pequeña con 4 Porciones";
+                    Escribir "2-Mediana con 8 Prociones";
+                    Escribir "3-Grande con 16 Porciones";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Cuenta con las siguientes decoraciones Disponibles";
+                    Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                    Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                    Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Fin";
+                  3:
+                    Escribir "Torta de Arequipe";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Cuenta Con los Tamaños y Porciones siquientes";
+                    Escribir "1-Pequeña con 4 Porciones";
+                    Escribir "2-Mediana con 8 Prociones";
+                    Escribir "3-Grande con 16 Porciones";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Cuenta con las siguientes decoraciones Disponibles";
+                    Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                    Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                    Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Fin";
+                  4:
+                    Escribir "Torta de Coco";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Cuenta Con los Tamaños y Porciones siquientes";
+                    Escribir "1-Pequeña con 4 Porciones";
+                    Escribir "2-Mediana con 8 Prociones";
+                    Escribir "3-Grande con 16 Porciones";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Cuenta con las siguientes decoraciones Disponibles";
+                    Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                    Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                    Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Fin";
+                  5:
+                    Escribir "Torta tresleches fria";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Cuenta Con los Tamaños y Porciones siquientes";
+                    Escribir "1-Pequeña con 4 Porciones";
+                    Escribir "2-Mediana con 8 Prociones";
+                    Escribir "3-Grande con 16 Porciones";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Cuenta con las siguientes decoraciones Disponibles";
+                    Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                    Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                    Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                    Escribir "------------------------------------------------------------------------------";
+                    Escribir "Fin";
+                    
+                FinSegun
+                
+                
+                
+              2:
+                Escribir "------Pedidos------";
+                Escribir "_____________________________Tortas disponibles_______________________________";
+                Escribir "Sabores";
+                Escribir "1-Torta de Chocolate";
+                Escribir "2-Torta de Vainilla";
+                Escribir "3-Torta de Arequipe";
+                Escribir "4-Torta de Coco";
+                Escribir "5-Torta de tres leches fria";
+                Escribir "------------------------------------------------------------------------------";
+                Escribir "Cuenta Con los Tamaños y Porciones siquientes";
+                Escribir "1-Pequeña con 4 Porciones";
+                Escribir "2-Mediana con 8 Prociones";
+                Escribir "3-Grande con 16 Porciones";
+                Escribir "------------------------------------------------------------------------------";
+                Escribir "Cuenta con las sguientes decoraciones Disponibles";
+                Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                Escribir "------------------------------------------------------------------------------";
+                Escribir "Porfavor de acuerdo a las opciones disponibles dijite su pedido: ";
+                Leer opcion_2;
+                Limpiar Pantalla;
+                Escribir "Su Pedidido es: ",opcion_2;
+                Escribir "______________________________Pedido en Camino___________________________________";
+                
+              3:
+                Escribir "------Ventas------";
+                Escribir "1-Torta de Chocolate";
+                Escribir "2-Torta de Vainilla";
+                Escribir "3-Torta de Arequipe";
+                Escribir "4-Torta de Coco";
+                Escribir "5-Torta tresleches fria";
+                Escribir "6-Cerrar sistema";
+                Leer opcion;
+                Limpiar Pantalla;
+                
+                
+                Segun opcion Hacer
+                  1:
+                    Escribir "------Tamaños y Porciones------";
+                    Escribir "1-Pequeña 4 Porciones";
+                    Escribir "2-Mediana 8 Porciones";
+                    Escribir "3-Grande 16 Porciones";
+                    Escribir "4-Cerrar programa";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "-----Torta Pequeña de 4 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Escribir "4-Cerrar";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Chocolate de tamaño Pequeño de 4 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Chocolate de tamaño Pequeño de 4 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Chocolate de tamaño Pequeño de 4 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                        
+                        
+                      2:
+                        Escribir "-----Torta Mediana de 8 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Chocolate de tamaño Mediana de 8 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Chocolate de tamaño Mediana de 8 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Chocolate de tamaño Mediana de 8 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                        
+                        
+                        
+                      3:
+                        Escribir "-----Torta Grande de 16 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Chocolate de tamaño Grande de 16 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Chocolate de tamaño Grande de 16 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Chocolate de tamaño Grande de 16 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                    
+                  2:
+                    Escribir "------Tamaños y Porciones------";
+                    Escribir "1-Pequeña 4 Porciones";
+                    Escribir "2-Mediana 8 Porciones";
+                    Escribir "3-Grande 16 Porciones";
+                    Escribir "4-Cerrar programa";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "-----Torta Pequeña de 4 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Escribir "4-Cerrar";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Vainilla de tamaño Pequeño de 4 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Vainilla de tamaño Pequeño de 4 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Vainilla de tamaño Pequeño de 4 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                      2:
+                        Escribir "-----Torta Mediana de 8 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Vainilla de tamaño Mediana de 8 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Vainilla de tamaño Mediana de 8 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Vainilla de tamaño Mediana de 8 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                        
+                      3:
+                        Escribir "-----Torta Grande de 16 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Vainilla de tamaño Grande de 16 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Vainilla de tamaño Grande de 16 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Vainilla de tamaño Grande de 16 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                    
+                    
+                  3:
+                    Escribir "------Tamaños y Porciones------";
+                    Escribir "1-Pequeña 4 Porciones";
+                    Escribir "2-Mediana 8 Porciones";
+                    Escribir "3-Grande 16 Porciones";
+                    Escribir "4-Cerrar programa";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "-----Torta Pequeña de 4 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Escribir "4-Cerrar";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Arequipe de tamaño Pequeño de 4 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Arequipe de tamaño Pequeño de 4 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Arequipe de tamaño Pequeño de 4 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                        
+                        
+                      2:
+                        Escribir "-----Torta Mediana de 8 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Arequipe de tamaño Mediana de 8 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Arequipe de tamaño Mediana de 8 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Arequipe de tamaño Mediana de 8 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                        
+                        
+                        
+                      3:
+                        Escribir "-----Torta Grande de 16 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Arequipe de tamaño Grande de 16 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Arequipe de tamaño Grande de 16 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Arequipe de tamaño Grande de 16 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                    
+                    
+                    
+                  4:
+                    Escribir "------Tamaños y Porciones------";
+                    Escribir "1-Pequeña 4 Porciones";
+                    Escribir "2-Mediana 8 Porciones";
+                    Escribir "3-Grande 16 Porciones";
+                    Escribir "4-Cerrar programa";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "-----Torta Pequeña de 4 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Escribir "4-Cerrar";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Coco de tamaño Pequeño de 4 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Coco de tamaño Pequeño de 4 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Coco de tamaño Pequeño de 4 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                        
+                        
+                      2:
+                        Escribir "-----Torta Mediana de 8 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Coco de tamaño Mediana de 8 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Coco de tamaño Mediana de 8 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Coco de tamaño Mediana de 8 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                        
+                        
+                        
+                      3:
+                        Escribir "-----Torta Grande de 16 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Coco de tamaño Grande de 16 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Coco de tamaño Grande de 16 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de Coco de tamaño Grande de 16 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                    
+                    
+                    
+                  5:
+                    Escribir "------Tamaños y Porciones------";
+                    Escribir "1-Pequeña 4 Porciones";
+                    Escribir "2-Mediana 8 Porciones";
+                    Escribir "3-Grande 16 Porciones";
+                    Escribir "4-Cerrar programa";
+                    Leer opcion;
+                    Limpiar Pantalla;
+                    
+                    Segun opcion Hacer
+                      1:
+                        Escribir "-----Torta Pequeña de 4 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Escribir "4-Cerrar";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de tres leches fria de tamaño Pequeño de 4 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de tres leches fria de tamaño Pequeño de 4 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de tres leches fria de tamaño Pequeño de 4 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                      2:
+                        Escribir "-----Torta Mediana de 8 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de tres leches fria de tamaño Mediana de 8 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de tres leches fria de tamaño Mediana de 8 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de tres leches fria de tamaño Mediana de 8 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                        
+                      3:
+                        Escribir "-----Torta Grande de 16 Porciones------";
+                        Escribir "Porfavor escoja la decoracion";
+                        Escribir "1-Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                        Escribir "2-Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                        Escribir "3-Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                        Leer opcion;
+                        Limpiar Pantalla;
+                        
+                        Segun opcion Hacer
+                          1:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de tres leches fria de tamaño Grande de 16 Porciones con Cubierta Cencilla del sabor de su prefrencia y Dedicatoria";
+                          2:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de tres leches fria de tamaño Grande de 16 Porciones con Cubierta del sabor de su prefrencia con bordes y Dedicatoria";
+                            
+                          3:
+                            Escribir "-----Venta-----";
+                            Escribir "Torta de tres leches fria de tamaño Grande de 16 Porciones con Cuerbierta del sabor de su preferencia con bordes y fruta con dedicatoria";
+                          4:
+                            Escribir "Cerrando Sistema";
+                          De Otro Modo:
+                            Escribir "La opcion Elegida no existe";
+                        FinSegun
+                      4:
+                        Escribir "Cerrando Sistema";
+                      De Otro Modo:
+                        Escribir "La opcion Elegida no existe";
+                    FinSegun
+                    
+                  6:
+                    Escribir "Cerrando Sistema";
+                  De Otro Modo:
+                    Escribir "La opcion Elegida no existe";
+                FinSegun
+                
+                
+              4:
+                Escribir "Cerrando Sistema";
+              De Otro Modo:
+                Escribir "La opcion Elegida no existe";
+            FinSegun
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 9</button>
+        <div class="caja">
+          <h3>9-El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+            Proceso Taller_02_9
+            Definir opcion Como Entero;
+            Definir base Como Real;
+            Definir base_2 Como Real;
+            Definir altura Como Real;
+            Definir resultado Como Real;
+            
+            Escribir "Figuras geometricas para calcular el area";
+            Escribir "1-Rectangulo";
+            Escribir "2-Triangulo";
+            Escribir "3-Trapecio";
+            Leer opcion;
+            Limpiar Pantalla;
+            
+            Segun opcion Hacer
+              1:
+                Escribir "------Rectangulo------";
+                Escribir "Para Calcular el Area por favor ingrese la base";
+                leer base;
+                Escribir "Ahora por favor ingrese altura";
+                Leer altura;
+                resultado <- base*altura;
+                Escribir "El area del rectangulo es: ",resultado;
+                
+              2:
+                Escribir "------Triangulo------";
+                Escribir "Para Calcular el Area por favor ingrese la base";
+                leer base;
+                Escribir "Ahora por favor ingrese altura";
+                Leer altura;
+                resultado <- base*altura/2;
+                Escribir "El area del triangulo es: ",resultado;
+              3:
+                Escribir "------Trapecio------";
+                Escribir "Para Calcular el Area por favor ingrese la base 1";
+                leer base;
+                Escribir "Por favor ingrese la base 2";
+                leer base_2;
+                Escribir "Ahora por favor ingrese altura";
+                Leer altura;
+                base <- base+base_2;
+                resultado <- base*altura;
+                resultado <- resultado/2;
+                Escribir "El area del trapecio es: ",resultado;
+                
+            FinSegun
+          FinProceso
+          
+           </code></pre>
+        </div>
+
+        <button class="accordion" id="tt3">Punto 10</button>
+        <div class="caja">
+          <h3>10-El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al valor que tiene en la cuenta.</h3>
+          <p>Codigo:</p>
+           <pre><code>
+            Proceso Taller_02_10
+            Definir titular Como Caracter;
+            definir opcion Como Entero;
+            Definir cuenta Como Entero;
+            Definir cantidad,monto,deposito Como Real;;
+            Definir retiro Como Real;
+            cantidad <- 0;
+            
+            Escribir "--------Su banco fiel-----------";
+          
+            Escribir "1-Ingreso";
+            Escribir "2-Salir";
+            Leer opcion;
+            
+            Limpiar Pantalla;
+            
+            Segun opcion Hacer
+              1:
+                Escribir "-------Ingreso-------";
+                Escribir "Por favor ingres el nombre del Titular de la cuenta";
+                leer titular;
+                Escribir "Por favor digite su numero de cuenta";
+                Leer cuenta;
+                Escribir "Por favor digite el Monto a ingresar";
+                leer deposito;
+                si deposito>=1 Entonces
+                  cantidad <- deposito;
+                  Limpiar Pantalla;
+                  Escribir "---------------------------------------------";
+                  Escribir "Transaccion Exitosa por ingreso de:",deposito;
+                  Escribir "----------------------------------------------";
+                  Escribir "Realizar otra opcion";
+                  Escribir "1-Retiro";
+                  Escribir "2-Consultar Saldo";
+                  Escribir "3-Salir";
+                  Leer opcion;
+                  Limpiar Pantalla;
+                  
+                  Segun opcion Hacer
+                    1:
+                      Escribir "---------------Retiro-------------------";
+                      Escribir "Ingrese la cantidad que quiere reteriar";
+                      leer retiro;
+                      si retiro<=cantidad Entonces
+                        cantidad <- cantidad-retiro;
+                        Escribir "Retiro exitoso de: ",retiro," Saldo en cuenta: ",cantidad;
+                      SiNo
+                        Escribir "No cuenta con los fondos necesarios para el retiro";
+                      FinSi
+                    2:
+                      Escribir "El titular: ",titular," de la Cuenta: ",cuenta," Tiene una cantidad de: ",cantidad,".";
+                      
+                    3:
+                      Escribir "Cerrando Sistema";
+                    De Otro Modo:
+                      Escribir "La opcion Elegida no existe";
+                  FinSegun
+                  
+                SiNo
+                  Escribir "Cantidad no Valida";
+                FinSi
+                cantidad <- cantidad+deposito;
+                
+              FinSegun
+          FinProceso
+          
+           </code></pre>
+        </div>
+      </article>
+      <footer>
+        <h2 class="texto2" id="t2"><dd>Contacto</dd></h2>
+
+        <ul class="texto2">
+          <li>
+            <dd>
+              <p>Celular: <a href="tel:+573005970871">3005970871</a></p>
+            </dd>
+          </li>
+          <li>
+            <dd>
+              <p>
+                Email:
+                <a href="mailto:Yeinerhidalgomolina@gmail.com"
+                  >Yeinerhidalgomolina@gmail.com</a
+                >
+              </p>
+            </dd>
+          </li>
+          <li>
+            <dd><p>Dirección: Calle 15 #4A-34</p></dd>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
+</html>
